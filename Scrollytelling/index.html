@@ -1,0 +1,501 @@
+<!Doctype html>
+<html>
+    <!-----------------
+       Scrollytelling_ComAv v1.0  
+       Plantilla Boostrap ScrollMagic + FadeInout
+        
+      ----------------->
+
+<head>
+
+    <!-- Meta --> 
+    <meta charset="utf-8">
+    <title>Plantilla Scrollytelling media4UX ver. 1.0 (2018) </title>
+    <!------- 
+        Plantilla ScrollMagic Boostrap basada en Scotch Magic Card template 
+         thanks to: scotch-io 
+         https://github.com/scotch-io/scrollmagic-starter-templates
+         https://scotch.io/bar-talk/freebie-scrollmagic-starter-templates 
+         tutorial: https://scotch.io/bar-talk/freebie-scrollmagic-starter-templates  
+
+      Tipo de letra importado de google: Lato
+      Imágenes con URL. 
+
+    ------>
+    
+    <!-- Librerías:  JQuery, GSAP, ScrollMagic, Boostrap, FontAwesome (boostrap), debug(Indicators)  -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.14.2/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/ScrollMagic.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/plugins/animation.gsap.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/plugins/debug.addIndicators.js"></script>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/plugins/ScrollToPlugin.min.js"></script>
+    <link rel="stylesheet" href="estilos.css">
+    
+    <!--- Iconos FontAwesome para boostrap: https://fontawesome.bootstrapcheatsheets.com  --->  
+    
+    <!-- Librería: AUDIOFade INCLUIR SI MODO LOCAL --
+        <script src="js/jquery.js"></script>
+        <script src="js/AudioFade.js"></script>
+
+    --> 
+    <!-- Librería: AUDIOFade INCLUIR MODO REMOTO -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script  src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="http://utopolis.ugr.es/media/scrollsound/js/AudioFade.js"></script> 
+
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <!-- SEO -->
+    <meta name="author" content="media4UX">
+    <meta name="description" content="Plantilla para Scrollytelling en ComAv">
+
+</head>
+
+<body>
+    <!-- Paso 1. Creamos controlador que gestiona las escena y disparaadores  --> 
+    <script>  var controller = new ScrollMagic.Controller(); </script>
+    
+     <!-- Audio. Incrustar (local) sonidos a Identificadores en modo loop --> 
+    <audio loop id="audio1" src="sound/1.mp3"></audio>
+    <audio loop id="audio2" src="sound/2.mp3"></audio>
+    <audio loop id="audio3" src="sound/3.mp3"></audio>
+    <audio loop id="audio4" src="sound/4.mp3"></audio>
+
+    <!-- BARRA DE NAVEGACION LATERAL....
+            Incluye referencias a las distintas secciones para hacer un salto...
+            Está anclada a la Derecha a media altura, en 'href' se indica el salto relativo... 
+    --> 
+    <nav>
+        <ul>
+            <li><a href="#Capitulo1"><span class="nav-dot"></span><span class="nav-label">Capitulo 1</span></a></li>
+            <li><a href="#Capitulo2"><span class="nav-dot"></span><span class="nav-label">Capitulo 2</span></a></li>
+            <li><a href="#Capitulo3"><span class="nav-dot"></span><span class="nav-label">Capitulo 3</span></a></li>
+            <li><a href="#Capitulo4"><span class="nav-dot"></span><span class="nav-label">Capitulo 4</span></a></li>
+             <li><a href="#Capitulo5"><span class="nav-dot"></span><span class="nav-label">Capitulo 5</span></a></li>
+      
+            </ul>
+    </nav>
+    
+    <!-- SECCIONES. Cada seccion ocupa la pantalla completa, tiene un id para indexar  
+            Al final de cada seccion se añade el scprit con los eventos que responde...       
+    --> 
+    
+    
+    <!-- Secccion 1. Titulos que cambian de tamaño (scale)  -->
+    <!--             Fondo claro y letras claras, centrado 
+
+id="CTA" class="cajaTexto-izda font_destacado_claro"
+ -->
+    <!---------------- Capitulo 1 ---------------->
+    
+    <section id="Capitulo1" class="full_screen_img1">
+     
+        <div id="CTA" class="cajaTexto-centro font_destacado_claro">
+                <h1 id="t_tamano"> Scrollytelling </h1>
+           
+                <p > Plantilla responsive + ScrollMagic  </p>
+                <p id="trigger-texto"> <i class="fa fa-laptop"></i></p>
+                <p>@media4UX 2018 </p>
+                <p>Plantilla diseñada para realizar narraciones mediante scrolling utilizando la librería SCrollmagic y GSAP.  </p>
+        
+        </div>
+        
+    </section>
+
+    <script>
+    // Animacion 1a. Escala
+    $(function () { // wait for document ready
+          var scen1a = new ScrollMagic.Scene({triggerElement:"#t_tamano", triggerHook: 0.2})
+							// animate color and top border in relation to scroll position
+							.setTween("#t_tamano", { scale: 1.2}) // the 
+							.addIndicators() // add indicators (requires plugin)
+							.addTo(controller);     
+         });
+    </script>
+    
+    <!-- Secccion 1b. DELAY de texto (en una caja centrada/zda/dcha) --> 
+    <section id="CTA" class="full_screen_img2">
+            <div class="cajaTexto-izda ">
+              <div id="t-delay" class="Cita pos-izda font_destacado_oscuro " >Pero aumentaba la impaciencia</div>
+          </div>
+            <div class="cajaTexto-centro ">
+                <p> Se podría adivinar algo más... </p>
+                <p> entre los libros perdidos y las huellas ...</p>
+        </div>
+        
+    </section>
+    
+     <script>
+    // Animacion 1b. DELAY de texto en Caja
+    $(function () { // wait for document ready
+       
+          var scen1b = new ScrollMagic.Scene({triggerElement:"#t-delay", triggerHook: 0.6})
+							// animate color and top border in relation to scroll position
+							.setTween("#t-delay", 2,{ y: '-=100', opacity: 0.8,  ease: Expo.easeInOut, delay:0.4}) // the 
+                       //     .setTween(TweenLite.To('#slide-delay', 2, 
+                        //                           {x: 30, scale:1.5, ease: Expo.easeInOut, y: -300, delay:1.2 }))
+                                                    // , y:100, ease:Power4.easeOut, delay:1.2}););
+							.addIndicators() // add indicators (requires plugin)
+							.addTo(controller);     
+         });
+    </script>
+    
+
+    
+    <!---------------- Capitulo 2 ---------------->
+ 
+    <!--- Seccion 2 Animacion: Pinning  -->
+     <section id="Capitulo2" class="full_screen_img3">
+        <div id="CTA" class="cajaTexto-dcha font_destacado_claro">
+            <div class="super-center">
+                <h1> Pinning </h1>
+                   
+            </div>
+            <div id="pines" class="slide-left" style="font-size: 30px">
+             <i class="fa fa-thumb-tack"></i> <i class="fa fa-thumb-tack"></i> <i class="fa fa-thumb-tack"></i>
+            </div>
+        </div>
+         <div id="buho" class="pin-top">
+               <img src="https://cdn.pixabay.com/photo/2017/07/20/18/38/owl-2523260_1280.png" width="150" height="200">
+            </div>
+         
+            <div class="stick-bottom">
+               <img src="https://cdn.pixabay.com/photo/2017/06/28/14/56/bullfinch-2450919_1280.png" width="300" height="150">
+            </div>
+          <div id= "mycar" >
+                <img src="https://cdn.pixabay.com/photo/2018/01/26/17/07/traffic-3109160_1280.png" width="450" height="300">
+            </div>
+       
+    </section>
+
+     <script>
+    // Animacion 2a. Efecto Pin  (fijar/pin  cuando están pegado)
+    $(function () { // wait for document ready
+          var scen2a = new ScrollMagic.Scene({triggerElement:"#buho", duration:180, triggerHook: 0.4})
+							// animate color and top border in relation to scroll position
+							.setPin("#buho") // the 
+							 .addIndicators() // add indicators (requires plugin)
+							.addTo(controller);     
+        
+         });
+    </script>
+    
+    
+     <script>
+    // Animacion 2b. Efecto Pin   (esperar para fijar)
+    $(function () { // wait for document ready
+          var scen2b = new ScrollMagic.Scene({triggerElement:"#pines", duration: 350, triggerHook: 0.9})
+							// animate color and top border in relation to scroll position
+							.setPin("#pines") // the 
+							 .addIndicators() // add indicators (requires plugin)
+							.addTo(controller);     
+        
+         });
+    </script>
+    
+    <script>
+     // Animacion 2c. Efecto desplazamiento (horizontal) coche
+     $(function () { // wait for document ready
+          // Movimiento horizontal del coche 
+          var scen2c = new ScrollMagic.Scene({triggerElement:"#mycar", duration: 250, triggerHook: 0.5})
+							// animate color and top border in relation to scroll position
+							.setTween("#mycar", 3, {  x: '70%', y: '+=10'}) 
+							 .addIndicators() // add indicators (requires plugin)
+							.addTo(controller);     
+        
+         }); 
+    </script>
+ 
+    <!---------------- Capitulo 3 ---------------->
+ 
+    <!-- Secccion 3. Desplazamientos horizontal y en loop --> 
+     
+      <section id="Capitulo3" class="full_screen_oscuro">
+          
+        <div id="CTA" class="font_destacado_claro">
+           <div class="cajaTexto-centro">
+               <h1 id="mueveIconos"> Movement </h1>   
+            </div>
+            <p id="woman" style="position: absolute; left: 10%; bottom: 20%; font-size: 45px"> <i class="fa fa-female"></i></p>
+             <p id="android" style="position: absolute; left: 15%; top: 60%;"> <i class="fa fa-android"></i></p>
+            
+               <p id="man" style="position: absolute; left: 80%; bottom: 20%; font-size: 45px"> <i class="fa fa-male"></i></p>
+             <p id="movil" style="position: absolute; left: 55%; bottom: 45%;"> <i class="fa fa-mobile"></i></p>
+            <p id="coche" style="position: absolute; left: 57%; bottom: 45%; scale:0.5"> <i class="fa fa-car"></i></p>
+           
+            <div id= "myplane" style="font-size: 35" class="pin-top">
+                <i class="fa fa-send-o" style="font-size: 35px"></i> 
+            </div>
+             
+        </div>
+    </section>
+
+  
+    <script>
+        // Animacion 3a. Efecto desplazamiento en buble yoyo : myplane (fontawesome icon)
+     $(function () { // wait for document ready
+          //  Movimiento desplaza hacia abajo del avion 
+         var tween = TweenMax.fromTo('#myplane', 1,    
+                { scale: 5, left: -100},
+                {scale: 0.2, left: '90%', repeat: -1, /*  infinite amount of repeats */ yoyo: true /* Make it go back and forth or not */ }
+                );
+          var scen3a = new ScrollMagic.Scene({triggerElement:"#mueveIconos", duration: 200, triggerHook: 0.5})
+							// animate color and top border in relation to scroll position
+							.setTween(tween) 
+							.addIndicators() // add indicators (requires plugin)
+							.addTo(controller);     
+        
+         }); 
+    </script> 
+    
+     <script>
+        // Animacion 3b. Desplaza android 
+     $(function () { // wait for document ready
+          //  Movimiento android 3 veces y para 
+         var tween2 = TweenMax.fromTo('#android', 1,    
+                { scale: 1, left: '80%'},
+                {scale: 2, left: '30%', repeat: 3,  yoyo: true /* Make it go back and forth or not */ }
+                );
+         var scen3b = new ScrollMagic.Scene({triggerElement:"#mueveIconos", duration: 500, triggerHook: 0.1})
+							// animate color and top border in relation to scroll position
+							.setTween("#android", 3, {  x: '70%', y: '+=10'}) 
+							 .addIndicators() // add indicators (requires plugin)
+							.addTo(controller);     
+        
+         }); 
+    </script> 
+    
+    <script>
+        // Animacion 3c. man & woman 
+     $(function () { // wait for document ready
+          //  Cambian de color
+         var scen3c = new ScrollMagic.Scene({triggerElement:"#mueveIconos", duration: 180, triggerHook: 0.4})
+							// animate color and top border in relation to scroll position
+                            .setTween("#man", 2,{ color:'grey', scale:3, left: '50%'}) 
+ 			                .addIndicators() // add indicators (requires plugin)
+							.addTo(controller);     
+   
+         var scen3d = new ScrollMagic.Scene({triggerElement:"#mueveIconos", duration: 180, triggerHook: 0.4})
+							// animate color and top border in relation to scroll position
+                            .setTween("#woman", 2,{ scale:3.5, left: '57%' }) 
+ 			                .addIndicators() // add indicators (requires plugin)
+							.addTo(controller);     
+   
+         var scen3e = new ScrollMagic.Scene({triggerElement:"#mueveIconos", duration: 180, triggerHook: 0.4})
+							// animate color and top border in relation to scroll position
+                            .setTween("#coche", 2,{ scale:12, color:'grey', left: '53%', bottom:'23%', opacity:1 }) 
+ 			                .addIndicators() // add indicators (requires plugin)
+							.addTo(controller);    
+         
+         
+             var scen3f = new ScrollMagic.Scene({triggerElement:"#mueveIconos", duration: 180, triggerHook: 0.1})
+							// animate color and top border in relation to scroll position
+                            .setTween("#movil", 2,{ opacity:0, color: 'red' }) 
+ 			                .addIndicators() // add indicators (requires plugin)
+							.addTo(controller);     
+         }); 
+        
+ 
+    </script> 
+    
+    
+     <!---------------- Capitulo 4 ---------------->
+    
+    
+    <!-- Secccion 4. AVION entre las nubes- SKY - Juego de varios movimientos simultaneos --> 
+      <section id="Capitulo4" class="full_screen_img2">
+     
+
+       <div id="CTA" class="cajaTexto-centro font_destacado_claro">
+               <h1> Cloudy sky</h1>   
+            </div>
+            <div id= "cloud1"  class="pin-top2" style="left:300">
+                
+               <img src="https://cdn.pixabay.com/photo/2017/06/20/04/42/cloud-2421760_1280.png" width="250" height="200">
+           
+            </div>
+             
+             <div id= "avion" class="pin-top2">
+                <img src="https://cdn.pixabay.com/photo/2017/01/10/15/26/airplane-1969382_1280.png" width="450" height="300">
+            </div>
+            <div id= "cloud2"  class="pin-top2" style="left:300">
+                
+               <img src="https://cdn.pixabay.com/photo/2017/06/20/04/42/cloud-2421760_1280.png" width="350" height="250">
+           
+            </div>
+            <div id= "cloud3"  class="pin-top2" style="left:300">
+                
+               <img src="https://cdn.pixabay.com/photo/2017/06/20/04/42/cloud-2421760_1280.png" width="350" height="200">
+           
+            </div>
+          <div>
+              
+        </div>
+    </section>
+    
+    
+    <script>
+        // Animacion 4. Avion entre Nubes (cloudy Sky)
+     $(function () { // wait for document ready
+          //  Movimiento desplaza hacia abajo del avion 
+         var tween4c1 = TweenLite.fromTo('#cloud1', 1,    
+                { scale: 2, left: "50%"},
+                {scale: 1, left: '70%'}
+                );
+          var scen4a = new ScrollMagic.Scene({triggerElement:"#cloud1", duration: 350, triggerHook: 0.3})
+							// animate color and top border in relation to scroll position
+							.setTween(tween4c1) 
+							.addIndicators() // add indicators (requires plugin)
+							.addTo(controller);     
+         
+         var tween4c2 = TweenLite.fromTo('#cloud2', 1,    
+                { scale: 3, left: "60%"},
+                {scale: 2, left: '20%'}
+                );
+          var scen4b = new ScrollMagic.Scene({triggerElement:"#cloud2", duration: 350, triggerHook: 0.3})
+							// animate color and top border in relation to scroll position
+							.setTween(tween4c2) 
+							.addIndicators() // add indicators (requires plugin)
+							.addTo(controller);     
+            var tween4c3 = TweenLite.fromTo('#cloud3', 1,    
+                { scale: 2, left: '80%', top: '20%'},
+                {scale: 3, left: '10%', top: '40%'}
+                );
+          var scen4c = new ScrollMagic.Scene({triggerElement:"#cloud3", duration: 350, triggerHook: 0.3})
+							// animate color and top border in relation to scroll position
+							.setTween(tween4c3) 
+							.addIndicators() // add indicators (requires plugin)
+							.addTo(controller);    
+         
+          var tween4c4 = TweenLite.fromTo('#avion', 1,    
+                { scale: 1, left: '70%', top: '20%'},
+                {scale: 2, left: '-10%', top: '30%'}
+                );
+          var scen4e = new ScrollMagic.Scene({triggerElement:"#avion", duration: 380, triggerHook: 0.5})
+							// animate color and top border in relation to scroll position
+							.setTween(tween4c4) 
+							.addIndicators() // add indicators (requires plugin)
+							.addTo(controller);     
+         }); 
+    </script> 
+    
+     <!---------------- Capitulo 5 ---------------->
+ 
+    
+    
+ 
+  
+    <section id="Capitulo5">
+        <div class="wrap">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2>Referencias</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>Tutorial (Petr Tichy)</h3>
+                        <p>A Simple One Page Template Using ScrollMagic de ihatetomatoes.net. What you will learn from this template? How to use multiple ScrollMagic scenes. How to use a callback function using ScrollMagic. How to remove a class on scroll </p>
+                        <p><a class="btn btn-danger" href="https://ihatetomatoes.net/a-simple-one-page-template-using-scrollmagic/" role="button">ihatetomatoes »</a></p>
+                    </div>
+                    <div class="col-md-6">
+                        <h3>Tutorial Scrollmagic (Petr Tichy)</h3>
+                        <p>A Simple Parallax Template Using ScrollMagic And GreenSock de ihatetomatoes.net. What you will learn from this template? How to create a parallax effect using GreenSock and ScrollMagic. How to add GreenSock tween to your ScrollMagic scene. How to add GreenSock timeline to your ScrollMagic scene. How to <b>use ScrollToPlugin for a smooth navigation</b>. </p>
+                        <p><a class="btn btn-danger" href="https://ihatetomatoes.net/a-simple-parallax-template-using-scrollmagic-and-greensock/" role="button">ihatetomatoes »</a></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>scotch.io tutorial (N. Cerminara)</h3>
+                        <p>Building Interactive Scrolling Websites with ScrollMagic.js. ScrollMagic is a jQuery plugin which lets you use the scrollbar like a playback scrub control. Using this, you can build some extremely beautiful landing pages and websites. </p>
+                        <p><a class="btn btn-danger" href="https://scotch.io/tutorials/building-interactive-scrolling-websites-with-scrollmagic-js" role="button">scotch.io »</a></p>
+                    </div>
+                    <div class="col-md-6">
+                        <h3>ScrollMagic</h3>
+                        <p>Documentation ScrollMagic v2.0.5 Build Status. The javascript library for magical scroll interactions. </p>
+                        <p><a class="btn btn-danger" href="http://scrollmagic.io/docs/index.html" role="button">View details »</a></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>Visual Guide Scrollmagic (Petr Tichy)</h3>
+                        <p>A Visual Guide To ScrollMagic. S/p>
+                        <p><a class="btn btn-danger" href="https://pudding.cool" role="button">ihatetomatoes »</a></p>
+                    </div>
+                    <div class="col-md-6">
+                        <h3>Tutorial Pinned Scrollmagic (Petr Tichy)</h3>
+                        <p>A Simple ScrollMagic Template With Pinned Sections </p>
+                        <p><a class="btn btn-danger" href="https://ihatetomatoes.net/a-simple-scrollmagic-template-with-pinned-sections/" role="button">ihatetomatoes »</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+ <!---------------- Capitulo 7 ---------------->
+ 
+<section id="Capitulo7" class="full_screen_dark">
+          
+        <div id="CTA" class="font_destacado_claro">
+           <div class="cajaTexto-centro">
+               <h1 id="mueveIconos"> The End </h1>  
+               <p> Creación y Difusión de Nuevos contenidos Audiovisuales </p>
+                <p> Grado en Comunicación Audiovisual </p>
+               <p> Universidad de Granada </p>
+            </div>
+       
+    </div>      
+    </section>
+    
+    
+    
+<script> 
+    $(function() {
+   
+   // change behaviour of controller to animate scroll instead of jump
+  controller.scrollTo(function (newpos) {
+    TweenMax.to(window, 1, {scrollTo: {y: newpos}, ease:Power1.easeInOut});
+});
+    //  bind scroll to anchor links
+$(document).on("click", "a[href^='#']", function (e) {
+    var id = $(this).attr("href");
+    if ($(id).length > 0) {
+        e.preventDefault();
+ 
+        // trigger scroll
+        controller.scrollTo(id);
+ 
+        // if supported by the browser we can even update the URL.
+        if (window.history && window.history.pushState) {
+            history.pushState("", document.title, id);
+        }
+    }
+      });
+ 
+    
+    });       
+        
+        
+</script>
+                
+ <!-- AudioFade.js Inicializacion      -->           
+   <script type="text/javascript">   
+     $(function() {
+        var first = new AudioFade('#audio1', 10, 500, 300).init();
+        var second = new AudioFade('#audio2', 350, 600, 550).init();
+        var third = new AudioFade('#audio3', 650, 800,700).init();
+          var third = new AudioFade('#audio4', 800, 1500, 1300).init();
+     });
+    </script> 
+
+</body>
+</html>
