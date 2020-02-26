@@ -1,11 +1,12 @@
 /*******************************************/
 /*             JOURNEY.JS                  */
 /*     Datos para USER JOURNEY MAP         */   
-/*          [DIU] UX Toolkit               */                        
-/*          ver 1.1, 2019                  */
+/*          [DIU] UX Toolkit v1.0 2019     */                        
+/*          ver 1.1 26/Feb/2020            */
 /*******************************************/
     
 /****  README:       */
+/****  v.1.1 Incluye nombre de tu grupo de prácticas (Grupo.ID), curso académico y enlace a github ***/
 /****  Modifica los datos para los Journey Map (uno para cada Persona)  */
 /****  Usa los 6 pasos y sigue las instrucciones */   
 /****  Las imagenes para  'Photo', 'feelX', 'imaX' están en carpeta ./photos **/
@@ -20,6 +21,8 @@ angular.module("angular", [])
 	.controller("controller", ["$scope", function($scope) { 
 		$scope.Grupo_ID ="DIU1.ABCDEF";
         $scope.Curso ="2019/20";
+        $scope.Github_ID ="https://github.com/mgea/UX-DIU-Toolkit";
+        
 		$scope.JourneyIndex = 0;
         
         $scope.Journeys = [
