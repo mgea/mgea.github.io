@@ -65,7 +65,18 @@ https://glitch.com/edit/#!/a-frame-mouse-click-example?path=index.html%3A55%3A7
 	   
     <!---- 3 - logo ritmo ---> 
     <a-marker preset="custom" type='pattern' url = "https://mgea.github.io/pj/pattern-musica-saxo.patt"> 
-     <a-sphere position="0 1 0" radius="0.5" material="color:blue"></a-sphere>
+     <a-sphere position="0 1 0" radius="0.5" material="color:blue"
+             event-set__enter="_event: mouseenter; color: #f26fc9"
+             event-set__leave="_event: mouseleave; color: #fff3D9" >
+       <a-animation attribute="rotation"
+               dur="3000"
+               fill="forwards"
+               to="0 360 0"
+               direction="alternate"
+               begin="click">
+        </a-animation>           
+               
+    </a-sphere>
       
     </a-marker>   
 
