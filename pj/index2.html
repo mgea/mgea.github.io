@@ -41,18 +41,9 @@ https://glitch.com/edit/#!/a-frame-mouse-click-example?path=index.html%3A55%3A7
    <a-assets>
                  
         <img id="detective" src="assets/img/detective.png">
-         
-
-       
-        <img id="door" src="assets/img/door.png">
-         <a-animation attribute="rotation"
-               dur="3000"
-               fill="forwards"
-               to="0 360 0"
-               direction="alternate"
-               begin="click"></a-animation>
-       
-       
+             
+       <img id="door" src="assets/img/door.png">
+     
        <img id="farola" src="assets/img/farola.png">
         
           
@@ -65,37 +56,34 @@ https://glitch.com/edit/#!/a-frame-mouse-click-example?path=index.html%3A55%3A7
     <a-box position="0 0 0"   depth="1.2" width="1.2" height="0.1" color="#FFFF00" shadow></a-box>    
 	       
 	 <a-image position="-0.2 0.4 0.2" width="0.2" height="0.8" src="#detective">
-        <a-animation attribute="position"
+<!---        <a-animation attribute="position"
                dur="1000"
                fill="forwards"
                to="0 2.5 -6"
                direction="alternate"
                begin="click"></a-animation>
         </a-image>
- 
+ --->
      <a-image position="-0.2 0.4 0" width="0.7" height="1.4" src="#farola"></a-image>
     
      <a-image position="0.4 0.5 -0.1" width="0.4" height="1" src="#door">
-         <a-animation attribute="position"
+     <!---    <a-animation attribute="position"
                dur="1000"
                fill="forwards"
                to="0.1 0.3 1"
                direction="alternate"
                begin="click"></a-animation>
-        </a-image>
+
+--->
+
+</a-image>
         
     <a-box position="-1 0 -1.2" rotation="0 45 0" color="#4CC3D9" shadow
              event-set__enter="_event: mouseenter; color: #026fc9"
              event-set__leave="_event: mouseleave; color: #4CC3D9">
         <!-- This animation begins when the box is clicked with the mouse. -->
-        <a-animation attribute="rotation"
-               dur="3000"
-               fill="forwards"
-               to="0 360 0"
-               direction="alternate"
-               begin="click"></a-animation>
-      </a-box>
-	 <a-text value="Escena 1: puerta" color="#acacac" position="-0.4 0.2 0.6" scale="0.4 0.4 0.4"></a-text>
+    
+	 <a-text value="Escena 1: puerta" color="#5c5c5c" position="-0.4 0.2 0.6" scale="0.4 0.4 0.4"></a-text>
         
 	<!-- <a-text value="encuentra la puerta de acceso " color="#ff00ff" position="-0.4 0.4 0.5" rotation="0 90 0" scale="0.4 0.4 0.4"></a-text> -->
 	  
