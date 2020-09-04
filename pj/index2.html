@@ -73,9 +73,16 @@ https://glitch.com/edit/#!/a-frame-mouse-click-example?path=index.html%3A55%3A7
                begin="click"></a-animation>
         </a-image>
  
-     <a-image position="-0.2 0.2 -0.2" width="0.3" height="0.9" src="#farola"></a-image>
+     <a-image position="-0.2 0.3 -0.2" width="0.4" height="1.2" src="#farola"></a-image>
     
-     <a-image position="0.4 0.2 0" width="0.4" height="0.9" src="#door"></a-image>
+     <a-image position="0.4 0.3 -0.1" width="0.4" height="1" src="#door">
+         <a-animation attribute="position"
+               dur="1000"
+               fill="forwards"
+               to="0.1 0.3 1"
+               direction="alternate"
+               begin="click"></a-animation>
+        </a-image>
         
     <a-box position="-1 0 -1.2" rotation="0 45 0" color="#4CC3D9" shadow
              event-set__enter="_event: mouseenter; color: #026fc9"
@@ -88,7 +95,7 @@ https://glitch.com/edit/#!/a-frame-mouse-click-example?path=index.html%3A55%3A7
                direction="alternate"
                begin="click"></a-animation>
       </a-box>
-	 <a-text value="Escena 1: puerta" color="#ff00ff" position="-0.5 0.1 1.3" scale="0.4 0.4 0.4"></a-text>
+	 <a-text value="Escena 1: puerta" color="#ff00ff" position="-0.4 0.1 0.6" scale="0.4 0.4 0.4"></a-text>
         
 	<!-- <a-text value="encuentra la puerta de acceso " color="#ff00ff" position="-0.4 0.4 0.5" rotation="0 90 0" scale="0.4 0.4 0.4"></a-text> -->
 	  
