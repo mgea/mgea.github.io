@@ -36,9 +36,9 @@ https://glitch.com/edit/#!/a-frame-mouse-click-example?path=index.html%3A55%3A7
     
    <a-scene embedded arjs='sourceType: webcam;'  sound="src:assets/sonido_intro.mp3; loop:true; autoplay: true; volume:0.2; positional: false">
 	   
-   <!---  la camara sube coordenadas en android ---
+   <!---  la camara sube coordenadas en android -------->
 
-	 <a-entity id="camera" camera="userHeight: 0.6" look-controls cursor="rayOrigin: mouse"></a-entity>   ----->
+	 <a-entity id="camera" camera="userHeight: 0.0" look-controls cursor="rayOrigin: mouse"></a-entity>   
        
        
    <a-assets>
@@ -124,9 +124,7 @@ https://glitch.com/edit/#!/a-frame-mouse-click-example?path=index.html%3A55%3A7
     <!---- 4 - logo historias ---> 
      <a-marker preset="custom" type='pattern' url = "https://mgea.github.io/pj/pattern-historias.patt"> 
         
-         <a-box position="0 0 0" rotation="0 45 0" color="#4CC3D9" shadow
-             event-set__enter="_event: mouseenter; color: #ffffc9"
-             event-set__leave="_event: mouseleave; color: #ffC3D9">
+         <a-box position="0 0 0" rotation="0 45 0" color="#4CC3D9" shadow>
         <!-- This animation begins when the box is clicked with the mouse. -->
         <a-animation attribute="rotation"
                dur="3000"
