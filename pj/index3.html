@@ -2,42 +2,31 @@
 v1. https://medium.com/arjs/augmented-reality-in-10-lines-of-html-4e193ea9fdbf
 v2. https://medium.com/@aschmelyun/so-you-want-to-get-started-with-ar-js-41dd4fba5f81
 
-index3.html
+index2.html
 version 2 28/06/2020, incluyendo assets & interacción 
 
 mouse events, based on this code: 
 https://glitch.com/edit/#!/a-frame-mouse-click-example?path=index.html%3A55%3A7
 
-
-
-https://aframe.io/examples/showcase/anime-UI/
-
 -->
 
 <head>
     <meta charset="utf-8">
-    <title>Descubre tu historia v3 r4</title>
+    <title>Descubre el sabor v3.0</title>
     <meta name="description" content="DESCUBRE TU HISTORIA">
-    
-    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script> 
-    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
-    
+      <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script> 
 
        <!--- <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>. -->
 
       <!--- <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.6.0/aframe/build/aframe-ar.js"></script> --->
     
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
     
  
      <!--- librería de eventos --->
-    
-    
-  <script src="https://unpkg.com/aframe-event-set-component@^4.0.0/dist/aframe-event-set-component.min.js"></script>
+      <script src="https://unpkg.com/aframe-event-set-component@^5.0.0/dist/aframe-event-set-component.min.js"></script> 
 
-    
 <!---    <script src="https://unpkg.com/aframe-event-set-component@3.0.3/dist/aframe-event-set-component.min.js"></script>
-     
-
 --->
     
   </head>
@@ -45,20 +34,22 @@ https://aframe.io/examples/showcase/anime-UI/
 
 <body style='margin : 0px; overflow: hidden;'>
     
-   <a-scene embedded arjs='sourceType: webcam;'  sound="src:assets/sonido_intro.mp3; loop:true; autoplay: true; volume:0.3; fog="type: linear; color: #AAA>
-	
+   <a-scene embedded arjs='sourceType: webcam;'  sound="src:assets/sonido_intro.mp3; loop:true; autoplay: true; volume:0.2; positional: false">
+	   
+   <!---  la camara sube coordenadas en android ---
+
+	 <a-entity id="camera" camera="userHeight: 0.6" look-controls cursor="rayOrigin: mouse"></a-entity>   ----->
        
-	 <a-entity id="camera" camera="userHeight: 1.6" look-controls cursor="rayOrigin: mouse"></a-entity> 
        
-   <!---- ASSETS ------>
-   <a-assets>             
+   <a-assets>
+                 
         <img id="detective" src="assets/img/detective.png">
              
        <img id="door" src="assets/img/door.png">
      
        <img id="farola" src="assets/img/farola.png">
         
-       
+          
    </a-assets>
 		
      
@@ -67,7 +58,14 @@ https://aframe.io/examples/showcase/anime-UI/
 	 
     <a-box position="0 0 0"   depth="1.2" width="1.2" height="0.1" color="#FFFF00" shadow></a-box>    
 	       
-	 <a-image position="-0.2 0.4 0.2" width="0.4" height="0.9" src="#detective"> </a-image>
+	 <a-image position="-0.2 0.4 0.2" width="0.4" height="0.9" src="#detective">
+        <a-animation attribute="position"
+               dur="1000"
+               fill="forwards"
+               to="0 0.5 -3"
+               direction="alternate"
+               begin="click"></a-animation>
+        </a-image>
  
      <a-image position="-0.2 0.4 0" width="0.7" height="1.4" src="#farola"></a-image>
     
@@ -80,16 +78,15 @@ https://aframe.io/examples/showcase/anime-UI/
                begin="click"></a-animation>
 
 --->
-     </a-image>
+
+</a-image>
         
     <a-box position="-1 0 -1.2" rotation="0 45 0" color="#4CC3D9" shadow
-             event-set__enter="_event: mouseenter; color: #aabbaa"
+             event-set__enter="_event: mouseenter; color: #026fc9"
              event-set__leave="_event: mouseleave; color: #4CC3D9">
-         
-        <!-- This animation begins when the box is clicked with the mouse. -->
-     </a-box>
-	 
-    <a-text value="Escena 1: puerta" color="#5c5c5c" position="-0.4 0.2 0.6" scale="0.4 0.4 0.4"></a-text>
+        <!-- This animation begins when the box is clicked with the mouse. --> 
+    </a-box> 
+	 <a-text value="Escena 1: puerta" color="#5c5c5c" position="-0.4 0.2 0.6" scale="0.4 0.4 0.4"></a-text>
         
 	<!-- <a-text value="encuentra la puerta de acceso " color="#ff00ff" position="-0.4 0.4 0.5" rotation="0 90 0" scale="0.4 0.4 0.4"></a-text> -->
 	  
@@ -103,15 +100,7 @@ https://aframe.io/examples/showcase/anime-UI/
     <!---- 2 - logo bodega --->   
     <a-marker preset="custom" type='pattern' url = "https://mgea.github.io/pj/pattern-bodega.patt"> 
   
-     
-    <a-box position="0 1 0" radius="0.5" material="color:blue"
-             event-set__enter="_event: mouseenter; color: #f26fc9"
-             event-set__leave="_event: mouseleave; color: #fff3D9" >
-      <a-animation attribute="rotation" to="0 360 0" repeat="indefinite"></a-animation>
-      </a-box>
-        
-        
-        
+    <a-sphere position="0 1 0" radius="0.5" material="color:red"></a-sphere>
     </a-marker>
 	   
     <!---- 3 - logo ritmo ---> 
