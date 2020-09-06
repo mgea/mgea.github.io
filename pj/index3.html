@@ -30,10 +30,10 @@ https://aframe.io/examples/showcase/anime-UI/
     
  
      <!--- librería de eventos --->
-    <script src="https://unpkg.com/aframe-event-set-component@3.0.3/dist/aframe-event-set-component.min.js"></script>
     
-<!---  <script src="https://unpkg.com/aframe-event-set-component@^4.0.0/dist/aframe-event-set-component.min.js"></script>
---->
+    
+  <script src="https://unpkg.com/aframe-event-set-component@^4.0.0/dist/aframe-event-set-component.min.js"></script>
+
     
 <!---    <script src="https://unpkg.com/aframe-event-set-component@3.0.3/dist/aframe-event-set-component.min.js"></script>
      
@@ -103,13 +103,15 @@ https://aframe.io/examples/showcase/anime-UI/
     <!---- 2 - logo bodega --->   
     <a-marker preset="custom" type='pattern' url = "https://mgea.github.io/pj/pattern-bodega.patt"> 
   
-     <a-entity id="rings-group-3" position="0 0 -2" scale="0.5 0.5 0.5">
-        <a-image mixin="image delayVisible" src="#ring3" scale=".8 .8 .8" event-set__loaded="_delay: 1000"></a-image>
-        <a-image mixin="image delayVisible" src="#ring5" scale=".9 .9 .9" position="0 0 .01" event-set__loaded="_delay: 1100"></a-image>
-        <a-image mixin="image delayVisible" src="#ring3" position="0 0 .02" event-set__loaded="_delay: 1100"
-                 animation__scale="property: scale; from: 1 1 1; to: 1.2 1.2 1.2; delay: 1100; dur: 250; easing: easeOutCubic"></a-image>
-      </a-entity>   
-       
+     
+    <a-box position="0 1 0" radius="0.5" material="color:blue"
+             event-set__enter="_event: mouseenter; color: #f26fc9"
+             event-set__leave="_event: mouseleave; color: #fff3D9" >
+      <a-animation attribute="rotation" to="0 360 0" repeat="indefinite"></a-animation>
+      </a-box>
+        
+        
+        
     </a-marker>
 	   
     <!---- 3 - logo ritmo ---> 
