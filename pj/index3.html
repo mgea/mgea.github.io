@@ -36,9 +36,9 @@ https://glitch.com/edit/#!/a-frame-mouse-click-example?path=index.html%3A55%3A7
     
    <a-scene embedded arjs='sourceType: webcam;'  sound="src:assets/sonido_intro.mp3; loop:true; autoplay: true; volume:0.2; positional: false">
 	   
-   <!---  la camara sube coordenadas en android -------->
+   <!---  la camara sube coordenadas en android ---
 
-	 <a-entity id="camera" camera="userHeight: 0.0" look-controls cursor="rayOrigin: mouse"></a-entity>   
+	 <a-entity id="camera" camera="userHeight: 0.6" look-controls cursor="rayOrigin: mouse"></a-entity>   ----->
        
        
    <a-assets>
@@ -100,7 +100,13 @@ https://glitch.com/edit/#!/a-frame-mouse-click-example?path=index.html%3A55%3A7
     <!---- 2 - logo bodega --->   
     <a-marker preset="custom" type='pattern' url = "https://mgea.github.io/pj/pattern-bodega.patt"> 
   
-    <a-sphere position="0 1 0" radius="0.5" material="color:red"></a-sphere>
+    <a-sphere position="0 1 0" radius="0.5" material="color:red"
+              
+              event-set__down="_event: mousedown; scale: 1.2 1.0 1.2"
+                event-set__up="_event: mouseup; scale: 1 1 1"
+                event-set__leave="_event: mouseleave; scale: 1 1 1">
+              
+              ></a-sphere>
     </a-marker>
 	   
     <!---- 3 - logo ritmo ---> 
