@@ -8,25 +8,35 @@ version 2 28/06/2020, incluyendo assets & interacción
 mouse events, based on this code: 
 https://glitch.com/edit/#!/a-frame-mouse-click-example?path=index.html%3A55%3A7
 
+
+
+https://aframe.io/examples/showcase/anime-UI/
+
 -->
 
 <head>
     <meta charset="utf-8">
-    <title>Descubre el sabor 3</title>
+    <title>Descubre tu historia v3</title>
     <meta name="description" content="DESCUBRE TU HISTORIA">
-      <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script> 
+     
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script> 
+    
+   
 
        <!--- <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>. -->
 
       <!--- <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.6.0/aframe/build/aframe-ar.js"></script> --->
     
-    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
     
  
      <!--- librería de eventos --->
-      <script src="https://unpkg.com/aframe-event-set-component@^4.0.0/dist/aframe-event-set-component.min.js"></script> 
-
+ 
+<script src="https://unpkg.com/aframe-event-set-component@5.0.0/dist/aframe-event-set-component.min.js"></script>
+    
+    
 <!---    <script src="https://unpkg.com/aframe-event-set-component@3.0.3/dist/aframe-event-set-component.min.js"></script>
+      <script src="https://unpkg.com/aframe-event-set-component@^4.0.0/dist/aframe-event-set-component.min.js"></script>
+
 --->
     
   </head>
@@ -36,9 +46,9 @@ https://glitch.com/edit/#!/a-frame-mouse-click-example?path=index.html%3A55%3A7
     
    <a-scene embedded arjs='sourceType: webcam;'  sound="src:assets/sonido_intro.mp3; loop:true; autoplay: true; volume:0.3; fog="type: linear; color: #AAA>
 	
-       <!---
+       
 	 <a-entity id="camera" camera="userHeight: 1.6" look-controls cursor="rayOrigin: mouse"></a-entity> 
-       --->
+       
    <a-assets>
                  
         <img id="detective" src="assets/img/detective.png">
@@ -47,7 +57,9 @@ https://glitch.com/edit/#!/a-frame-mouse-click-example?path=index.html%3A55%3A7
      
        <img id="farola" src="assets/img/farola.png">
         
-          
+          <a-mixin id="image" geometry="height: 2; width: 2"></a-mixin>
+        <a-mixin id="delayVisible" event-set__loaded="visible: true" visible="false"></a-mixin>
+       
    </a-assets>
 		
      
@@ -99,7 +111,13 @@ https://glitch.com/edit/#!/a-frame-mouse-click-example?path=index.html%3A55%3A7
     <!---- 2 - logo bodega --->   
     <a-marker preset="custom" type='pattern' url = "https://mgea.github.io/pj/pattern-bodega.patt"> 
   
-    <a-sphere position="0 1 0" radius="0.5" material="color:red"></a-sphere>
+     <a-entity id="rings-group-3" position="0 0 -2" scale="0.5 0.5 0.5">
+        <a-image mixin="image delayVisible" src="#ring3" scale=".8 .8 .8" event-set__loaded="_delay: 1000"></a-image>
+        <a-image mixin="image delayVisible" src="#ring5" scale=".9 .9 .9" position="0 0 .01" event-set__loaded="_delay: 1100"></a-image>
+        <a-image mixin="image delayVisible" src="#ring3" position="0 0 .02" event-set__loaded="_delay: 1100"
+                 animation__scale="property: scale; from: 1 1 1; to: 1.2 1.2 1.2; delay: 1100; dur: 250; easing: easeOutCubic"></a-image>
+      </a-entity>   
+       
     </a-marker>
 	   
     <!---- 3 - logo ritmo ---> 
