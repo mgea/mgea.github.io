@@ -18,9 +18,8 @@ https://aframe.io/examples/showcase/anime-UI/
     <meta charset="utf-8">
     <title>Descubre tu historia v3</title>
     <meta name="description" content="DESCUBRE TU HISTORIA">
-     
-    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script> 
     
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script> 
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
     
 
@@ -31,7 +30,7 @@ https://aframe.io/examples/showcase/anime-UI/
     
  
      <!--- librería de eventos --->
-  <script src="https://unpkg.com/aframe-event-set-component@^4.0.0/dist/aframe-event-set-component.min.js"></script>
+  <script src="https://unpkg.com/aframe-event-set-component@^5.0.0/dist/aframe-event-set-component.min.js"></script>
 
     
 <!---    <script src="https://unpkg.com/aframe-event-set-component@3.0.3/dist/aframe-event-set-component.min.js"></script>
@@ -49,8 +48,8 @@ https://aframe.io/examples/showcase/anime-UI/
        
 	 <a-entity id="camera" camera="userHeight: 1.6" look-controls cursor="rayOrigin: mouse"></a-entity> 
        
-   <a-assets>
-                 
+   <!---- ASSETS ------>
+   <a-assets>             
         <img id="detective" src="assets/img/detective.png">
              
        <img id="door" src="assets/img/door.png">
@@ -68,14 +67,7 @@ https://aframe.io/examples/showcase/anime-UI/
 	 
     <a-box position="0 0 0"   depth="1.2" width="1.2" height="0.1" color="#FFFF00" shadow></a-box>    
 	       
-	 <a-image position="-0.2 0.4 0.2" width="0.4" height="0.9" src="#detective">
-        <a-animation attribute="position"
-               dur="1000"
-               fill="forwards"
-               to="0 0.5 -3"
-               direction="alternate"
-               begin="click"></a-animation>
-        </a-image>
+	 <a-image position="-0.2 0.4 0.2" width="0.4" height="0.9" src="#detective"> </a-image>
  
      <a-image position="-0.2 0.4 0" width="0.7" height="1.4" src="#farola"></a-image>
     
@@ -94,6 +86,12 @@ https://aframe.io/examples/showcase/anime-UI/
     <a-box position="-1 0 -1.2" rotation="0 45 0" color="#4CC3D9" shadow
              event-set__enter="_event: mouseenter; color: #026fc9"
              event-set__leave="_event: mouseleave; color: #4CC3D9">
+         <a-animation attribute="position"
+               dur="1000"
+               fill="forwards"
+               to="0 0.5 -3"
+               direction="alternate"
+               begin="click"></a-animation>
         <!-- This animation begins when the box is clicked with the mouse. -->
      </a-box>
 	 
