@@ -56,8 +56,6 @@ https://aframe.io/examples/showcase/anime-UI/
      
        <img id="farola" src="assets/img/farola.png">
         
-          <a-mixin id="image" geometry="height: 2; width: 2"></a-mixin>
-        <a-mixin id="delayVisible" event-set__loaded="visible: true" visible="false"></a-mixin>
        
    </a-assets>
 		
@@ -80,18 +78,12 @@ https://aframe.io/examples/showcase/anime-UI/
                begin="click"></a-animation>
 
 --->
-
      </a-image>
         
     <a-box position="-1 0 -1.2" rotation="0 45 0" color="#4CC3D9" shadow
-             event-set__enter="_event: mouseenter; color: #026fc9"
+             event-set__enter="_event: mouseenter; color: #aabbaa"
              event-set__leave="_event: mouseleave; color: #4CC3D9">
-         <a-animation attribute="position"
-               dur="1000"
-               fill="forwards"
-               to="0 0.5 -3"
-               direction="alternate"
-               begin="click"></a-animation>
+         
         <!-- This animation begins when the box is clicked with the mouse. -->
      </a-box>
 	 
