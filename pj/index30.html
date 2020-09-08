@@ -104,12 +104,14 @@ Uso de eventos:
     <!---- 2 - logo bodega --->   
     <a-marker preset="custom" type='pattern' url = "https://mgea.github.io/pj/pattern-bodega.patt"> 
   
-    <a-sphere position="0 0.4 0" radius="0.5"  material="color:red">
+    <a-sphere position="0 0.4 0" radius="0.5"  material="color:red"
+	      event-set__enter="_event: mouseenter; color: #026fc9" 
+             event-set__leave="_event: mouseleave; color: #4CC3D9">
 	    
 	    <a-animation attribute="position"
                dur="1000"
                fill="forwards"
-               to="0 1.0 0.2"
+               to="0 2.0 0.5"
                direction="alternate"
                begin="mouseenter"></a-animation>
          
