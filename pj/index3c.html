@@ -2,7 +2,7 @@
 v1. https://medium.com/arjs/augmented-reality-in-10-lines-of-html-4e193ea9fdbf
 v2. https://medium.com/@aschmelyun/so-you-want-to-get-started-with-ar-js-41dd4fba5f81
 
-index2.html
+index3c.html
 version 2 28/06/2020, incluyendo assets & interacción 
 
 mouse events, based on this code: 
@@ -12,7 +12,7 @@ https://glitch.com/edit/#!/a-frame-mouse-click-example?path=index.html%3A55%3A7
 
 <head>
     <meta charset="utf-8">
-    <title>Descubre el sabor v3.0</title>
+    <title>Descubre el sabor v3.0c</title>
     <meta name="description" content="DESCUBRE TU HISTORIA">
       <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script> 
 
@@ -36,11 +36,7 @@ https://glitch.com/edit/#!/a-frame-mouse-click-example?path=index.html%3A55%3A7
     
    <a-scene embedded arjs='sourceType: webcam;'  sound="src:assets/sonido_intro.mp3; loop:true; autoplay: true; volume:0.2; positional: false">
 	   
-   <!---  la camara sube coordenadas en android ---
-
-	 <a-entity id="camera" camera="userHeight: 0.6" look-controls cursor="rayOrigin: mouse"></a-entity>   ----->
-       
-       <a-camera look-controls position="0.0 0.0 0.0"><a-cursor></a-cursor></a-camera>
+  
    <a-assets>
                  
         <img id="detective" src="assets/img/detective.png">
@@ -156,8 +152,14 @@ https://glitch.com/edit/#!/a-frame-mouse-click-example?path=index.html%3A55%3A7
       
     </a-marker>   
     
-    
-    <a-entity camera></a-entity>
+     <!---  la camara sube coordenadas en android ---
+
+	 <a-entity id="camera" camera="userHeight: 0.6" look-controls cursor="rayOrigin: mouse"></a-entity>  
+      <a-camera look-controls position="0.0 0.0 0.0"><a-cursor></a-cursor></a-camera>  ----->
+       
+    <a-entity camera><a-cursor></a-cursor></a-entity>
+       
+       
   </a-scene>
   
   
