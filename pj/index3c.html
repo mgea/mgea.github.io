@@ -65,7 +65,10 @@ https://glitch.com/edit/#!/a-frame-mouse-click-example?path=index.html%3A55%3A7
  
      <a-image position="-0.2 0.4 0" width="0.7" height="1.4" src="#farola"></a-image>
     
-     <a-image position="0.4 0.5 -0.1" width="0.4" height="1" src="#door">
+     <a-image position="0.4 0.5 -0.1" width="0.4" height="1" src="#door"
+	      
+	      event-set__enter="_event: mouseenter; scale: 2 2 2"
+	      >
      <!---    <a-animation attribute="position"
                dur="1000"
                fill="forwards"
