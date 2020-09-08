@@ -57,9 +57,9 @@ Uso de eventos de script vindex21.html
      
     <!---- 1 - logo alhambra ---> 
     <a-marker preset="custom" type='pattern' url = "https://mgea.github.io/pj/pattern-logo.patt">
-	<!--- 
+	
     <a-box position="0 0 0"   depth="1.2" width="1.2" height="0.1" color="#FFFF00" shadow></a-box>    
-    --->
+    
         
         
 	 <a-image position="-0.2 0.4 0.2" width="0.4" height="0.9" src="#detective" animation="property: position; to: 0.4 0.5 0.0; dur: 2000; easing: linear; loop: true" >
@@ -78,12 +78,21 @@ Uso de eventos de script vindex21.html
 
 --->
 
-</a-image>
+    </a-image>
         
-    <a-box position="0.0 0 -0.8"  color="#4CC3D9" shadow
+    <a-box position="0.3 0.5 -0.8" width="1.4" color="#4CC3D9" shadow
              event-set__enter="_event: mouseenter; color: #026fc9"
              event-set__leave="_event: mouseleave; color: #4CC3D9">
         <!-- This animation begins when the box is clicked with the mouse. --> 
+        
+        <a-animation attribute="position"
+               dur="1000"
+               fill="forwards"
+               to="0 0 0"
+               direction="alternate"
+               begin="click"></a-animation>
+
+        
     </a-box> 
 	 <a-text value="Escena 1: puerta" color="#5c5c5c" position="-0.4 0.2 0.6" scale="0.4 0.4 0.4"></a-text>
         
