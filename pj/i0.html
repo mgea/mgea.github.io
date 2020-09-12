@@ -84,12 +84,12 @@ Uso de eventos:
     
      
  <a-sphere position="-0.5 0.4 0.5" radius="0.3"  color="#ff00aa" 
-               animation="property: position; to: 0.4 0.5 0.0; dur: 2000; easing: linear; loop: true; dir:alternate; startEvents: mouseenter; pauseEvents: mouseleave" ></a-sphere>
+               animation="property: position; to: 0.4 0.8 -0.5; dur: 2000; easing: linear; loop: true; dir:alternate " ></a-sphere>
         
             <a-entity
   geometry="primitive: box"
   material="color: red"
-		    position="-0.5,0.5,0.5"
+		    position="-0.5,0.5,0.5" widht="0.3" height="0.3" depth = "0.2" 
   animation__mouseenter="property: components.material.material.color; type: color; to: blue; startEvents: mouseenter; dur: 500";
   animation__mouseleave="property: components.material.material.color; type: color; to: red; startEvents: mouseleave; dur: 500";
                   ></a-entity>
