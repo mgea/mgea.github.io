@@ -3,18 +3,29 @@ v1. https://medium.com/arjs/augmented-reality-in-10-lines-of-html-4e193ea9fdbf
 v2. https://medium.com/@aschmelyun/so-you-want-to-get-started-with-ar-js-41dd4fba5f81
 
 i0.html
-version 2 28/06/2020, incluyendo assets & interacción 
+base: index3clic.html 
+Version de objetos predeterminados 12/09/2020, incluyendo assets & interacción 
 
-mouse events, based on this code: 
-https://glitch.com/edit/#!/a-frame-mouse-click-example?path=index.html%3A55%3A7
+mouse events, registering en ar.js basado en: 
+
+https://medium.com/chialab-open-source/how-to-handle-click-events-on-ar-js-58fcacb77c4
+https://github.com/nicolocarpignoli/nicolocarpignoli.github.io/tree/master/ar-click-events
+
+
+Uso de eventos: 
+
+
+
 
 -->
 
 <head>
     <meta charset="utf-8">
-    <title>Descubre el sabor v3.0c</title>
-    <meta name="description" content="DESCUBRE TU HISTORIA">
-      <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script> 
+    <title>Interaccion AR v0</title>
+    <meta name="description" content="Interacción v0">
+      
+    
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script> 
 
        <!--- <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>. -->
 
@@ -24,52 +35,72 @@ https://glitch.com/edit/#!/a-frame-mouse-click-example?path=index.html%3A55%3A7
     
  
      <!--- librería de eventos --->
-      <script src="https://unpkg.com/aframe-event-set-component@^5.0.0/dist/aframe-event-set-component.min.js"></script> 
+      <script src="https://unpkg.com/aframe-event-set-component@^4.0.0/dist/aframe-event-set-component.min.js"></script> 
 
-<!---    <script src="https://unpkg.com/aframe-event-set-component@3.0.3/dist/aframe-event-set-component.min.js"></script>
---->
+    
+    <!---
+     <script src="https://aframe.io/releases/0.9.0/aframe.min.js"></script> 
+    
+    <script src="https://rawgit.com/jeromeetienne/AR.js/master/aframe/build/aframe-ar.min.js"></script>
+
+
+    <script src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
+    --->
+    <!-- import events.js script -->
+    <script src="https://rawgit.com/nicolocarpignoli/nicolocarpignoli.github.io/master/ar-click-events/events.js"></script>
+    
+    
+    
     
   </head>
 
 
 <body style='margin : 0px; overflow: hidden;'>
     
-   <a-scene embedded arjs='sourceType: webcam;'  sound="src:assets/sonido_intro.mp3; loop:true; autoplay: true; volume:0.2; positional: false">
+  <!---- camara funciona OK en android con cursor ---> 
+   <a-scene embedded arjs='sourceType: webcam;'  vr-mode-ui="enabled: false"  sound="src:assets/sonido_intro.mp3; loop:true; autoplay: true; volume:0.2; positional: false">
 	   
-  
+   <!---  la camara sube coordenadas en android ---
+	 <a-entity id="camera" camera="userHeight: 0.6" look-controls cursor="rayOrigin: mouse"></a-entity>   ----->
+       
+       
    <a-assets>
                  
         <img id="detective" src="assets/img/detective.png">
              
-       <img id="door" src="assets/img/door.png">
+       <img id="door" src="assets/img/door2.png">
      
        <img id="farola" src="assets/img/farola.png">
         
-          
+         
    </a-assets>
 		
      
     <!---- 1 - logo alhambra ---> 
     <a-marker preset="custom" type='pattern' url = "https://mgea.github.io/pj/pattern-logo.patt">
-	 
-    <a-box position="0 0 0"   depth="1.2" width="1.2" height="0.1" color="#FFFF00" shadow></a-box>    
-	       
-	 <a-image position="-0.2 0.4 0.2" width="0.4" height="0.9" src="#detective"
-		   event-set__enter="_event: mouseenter; scale: 0.5 0.5 0.5;">
-            <a-animation attribute="position"
-               dur="1000"
-               fill="forwards"
-               to="0.8 0.4 0.2"
-               direction="alternate"
-               begin="mouseenter"></a-animation>
+	
+    <!---- BASE ---->
+    <a-box position="0 0 0"   depth="1.2" width="1.2" height="0.1" color="#d0d0c0" shadow></a-box>    
+    
+     
+    <a-sphere position="-0.5 0.4 0.5" width="0.4" height="0.9" color="#ff00aa" animation="property: position; to: 0.4 0.5 0.0; dur: 2000; easing: linear; loop: true"></a-sphere>
+        
+     <a-sphere position="0.5 1.2 0.5" width="0.2" height="0.2" color="#ffff0a" animation="property: position; to: -0.4 1.2 0.0; dur: 2000; easing: linear; loop: true"></a-sphere>
+        
+    
+        
+        
+   <!---     
+	 <a-image position="-0.2 0.4 0.2" width="0.4" height="0.9" src="#detective" animation="property: position; to: 0.4 0.5 0.0; dur: 2000; easing: linear; loop: true" >
+
         </a-image>
  
      <a-image position="-0.2 0.4 0" width="0.7" height="1.4" src="#farola"></a-image>
     
-     <a-image position="0.4 0.5 -0.1" width="0.4" height="1" src="#door"
-	      
-	      event-set__enter="_event: mouseenter; scale: 1.2 1 1.5; position: 0.0 0.4 0.5;" >
-	     
+     <a-image position="0.4 0.5 -0.1" width="0.4" height="1" src="#door">
+
+--->
+
      <!---    <a-animation attribute="position"
                dur="1000"
                fill="forwards"
@@ -78,14 +109,8 @@ https://glitch.com/edit/#!/a-frame-mouse-click-example?path=index.html%3A55%3A7
                begin="click"></a-animation>
 
 --->
-
-</a-image>
-        
-    <a-box position="-1 0 -1.2" rotation="0 45 0" color="#4CC3D9" shadow
-             event-set__enter="_event: mouseenter; color: #026fc9"
-             event-set__leave="_event: mouseleave; color: #4CC3D9">
-        <!-- This animation begins when the box is clicked with the mouse. --> 
-    </a-box> 
+       
+       
 	 <a-text value="Escena 1: puerta" color="#5c5c5c" position="-0.4 0.2 0.6" scale="0.4 0.4 0.4"></a-text>
         
 	<!-- <a-text value="encuentra la puerta de acceso " color="#ff00ff" position="-0.4 0.4 0.5" rotation="0 90 0" scale="0.4 0.4 0.4"></a-text> -->
@@ -93,26 +118,18 @@ https://glitch.com/edit/#!/a-frame-mouse-click-example?path=index.html%3A55%3A7
     </a-marker>
 	   
        
-       
-       
-       
+    
        
     <!---- 2 - logo bodega --->   
-    <a-marker preset="custom" type='pattern' url = "https://mgea.github.io/pj/pattern-bodega.patt"> 
+    <a-marker preset="custom" type='pattern' url = "https://mgea.github.io/pj/pattern-bodega.patt" markerhandler emitevents="true" cursor="rayOrigin: mouse" id="animated-marker" type='barcode' value='6'> 
   
-    <a-sphere position="0 1 0" radius="0.5" material="color:red" 
+    <a-sphere id="animated-model" position="0 0.4 0" scale="1" radius="0.5" material="color:red">
         
-	            event-set__enter="_event: mouseenter; color: #f2f2f9; animation=property: position; to: 5 1.5 4; loop: true; dur: 10000">
-                                                                                                                                         
-   
-	      <!---     
-	      event-set__enter="_event: mouseenter; color: #f26fc9"
-      
-              event-set__down="_event: mousedown; position: 0.0 0.0 0.5; color: #FFFFFF"
-                event-set__up="_event: mouseup; scale: 1 1 1"
-                event-set__leave="_event: mouseleave; scale: 0.5 0.5 1">
-              --->
-              </a-sphere>
+        </a-sphere>
+    
+    
+         <a-box position="0.8 0.4 -0.2" rotation="0 45 0" withcolor="#4CC3D9" shadow></a-box> 
+        
     </a-marker>
 	   
     <!---- 3 - logo ritmo ---> 
@@ -125,7 +142,14 @@ https://glitch.com/edit/#!/a-frame-mouse-click-example?path=index.html%3A55%3A7
                fill="forwards"
                to="0 2.5 -6"
                direction="alternate"
-               begin="click"></a-animation>
+               begin="mouseenter"></a-animation>
+         
+         <a-animation attribute="position"
+               dur="1000"
+               fill="forwards"
+               to="0 1 0"
+               direction="alternate"
+               begin="mouseleave"></a-animation>
       </a-sphere>
                
    
@@ -136,10 +160,16 @@ https://glitch.com/edit/#!/a-frame-mouse-click-example?path=index.html%3A55%3A7
     <!---- 4 - logo historias ---> 
      <a-marker preset="custom" type='pattern' url = "https://mgea.github.io/pj/pattern-historias.patt"> 
         
-         <a-box position="0 0 0" rotation="0 45 0" color="#4CC3D9" shadow animation="property: rotation; to: 0 360 0; loop: true; dur: 10000"
-		 event-set__enter="_event: mouseenter; color: #f2f2f9; animation=property: rotation; rotation; to: 360 0 0; loop: true; dur: 10000">
+         <a-box position="0 0 0" rotation="0 45 0" color="#4CC3D9" shadow
+             event-set__enter="_event: mouseenter; color: #ffffc9"
+             event-set__leave="_event: mouseleave; color: #ffC3D9">
         <!-- This animation begins when the box is clicked with the mouse. -->
-    
+        <a-animation attribute="rotation"
+               dur="3000"
+               fill="forwards"
+               to="0 360 0"
+               direction="alternate"
+               begin="click"></a-animation>
       </a-box> 
          
     
@@ -158,14 +188,8 @@ https://glitch.com/edit/#!/a-frame-mouse-click-example?path=index.html%3A55%3A7
       
     </a-marker>   
     
-     <!---  la camara sube coordenadas en android ---
-
-	 <a-entity id="camera" camera="userHeight: 0.6" look-controls cursor="rayOrigin: mouse"></a-entity>  
-      <a-camera look-controls position="0.0 0.0 0.0"><a-cursor></a-cursor></a-camera>  ----->
-       
-    <a-entity camera><a-cursor></a-cursor></a-entity>
-       
-       
+    
+    <a-entity camera></a-entity>
   </a-scene>
   
   
