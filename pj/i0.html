@@ -148,9 +148,35 @@ https://glitch.com/edit/#!/a-frame-mouse-click-example?path=index.html%3A55%3A7
     </a-marker>   
     <!---- 6 - logo cerveza --->  
     <a-marker preset="custom" type='pattern' url = "https://mgea.github.io/pj/pattern-cerveza.patt"> 
-      <a-box position="0 0.0 0" rotation="0 45 0" color="#4CC3D9" shadow></a-box> 
-      <a-cylinder position="0 0.5 0" radius="0.5" height="1.5" color="#FFC65D" shadow></a-cylinder>
       
+        
+      <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9" shadow
+             event-set__enter="_event: mouseenter; color: #026fc9"
+             event-set__leave="_event: mouseleave; color: #4CC3D9">
+        <!-- This animation begins when the box is clicked with the mouse. -->
+        <a-animation attribute="rotation"
+               dur="3000"
+               fill="forwards"
+               to="0 360 0"
+               direction="alternate"
+               begin="click"></a-animation>
+      </a-box>
+
+      <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E" shadow
+                event-set__enter="_event: mouseenter; color: #026fc9"
+                event-set__leave="_event: mouseleave; color: #EF2D5E">
+        
+        <!-- This animation begins when the sphere is clicked with the mouse. -->
+        <a-animation attribute="position"
+               dur="1000"
+               fill="forwards"
+               to="0 2.5 -6"
+               direction="alternate"
+               begin="click"></a-animation>
+      </a-sphere>
+        
+        
+        
     </a-marker>   
     
      <!---  la camara sube coordenadas en android ---
