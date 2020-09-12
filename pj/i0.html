@@ -83,15 +83,22 @@ Uso de eventos:
     <a-box position="0 0 0"   depth="1.2" width="1.2" height="0.1" color="#d0d0c0" shadow></a-box>    
     
      
-    <a-sphere position="-0.5 0.4 0.5" radius="0.3"  color="#ff00aa" animation="property: position; to: 0.4 0.5 0.0; dur: 2000; easing: linear; loop: true"></a-sphere>
-        
- <a-sphere position="-0.5 0.4 0.5" radius="0.3"  color="#ff00aa" 
+  <a-sphere position="-0.5 0.4 0.5" radius="0.3"  color="#ff00aa" 
                animation="property: position; to: 0.4 0.5 0.0; dur: 2000; easing: linear; loop: true"
-               animation__2="property: position; to: -0.5 0.4 0.5; dur: 2000; easing: linear; loop: true"></a-sphere>
+               animation__2="property: position; to: -0.5 0.4 0.5; dur: 2000; easing: linear; loop: true"
+	        event-set__enter="_event: mouseenter; color: #f26fc9"; ></a-sphere>
         
-     <a-sphere position="-0.8 0.2 0.2" radius="0.3"  color="#000000"></a-sphere>
-     <a-sphere position="0.5 0.4 0.2" radius="0.3"  color="#000000"></a-sphere>
-      <a-sphere position="1.2 0.7 0.2" radius="0.3"  color="#000000"></a-sphere>
+     <a-sphere position="0.5 1.2 0.5" radius="0.3"  color="#ffff0a" animation="property: position; to: -0.4 1.2 0.0; dur: 2000; easing: linear; loop: true"></a-sphere>
+        
+            <a-entity
+  geometry="primitive: box"
+  material="color: red"
+  animation__mouseenter="property: components.material.material.color; type: color; to: blue; startEvents: mouseenter; dur: 500";
+  animation__mouseleave="property: components.material.material.color; type: color; to: red; startEvents: mouseleave; dur: 500";
+                  ></a-entity>
+     <a-sphere position="-0.8 0.2 0.2" radius="0.3"  color="#f00000"></a-sphere>
+     <a-sphere position="0.5 0.4 0.2" radius="0.3"  color="#f00000"></a-sphere>
+      <a-sphere position="1.2 0.7 0.2" radius="0.3"  color="#f00000"></a-sphere>
         
         
    <!---     
