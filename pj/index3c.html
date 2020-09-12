@@ -101,13 +101,16 @@ https://glitch.com/edit/#!/a-frame-mouse-click-example?path=index.html%3A55%3A7
     <a-marker preset="custom" type='pattern' url = "https://mgea.github.io/pj/pattern-bodega.patt"> 
   
     <a-sphere position="0 1 0" radius="0.5" material="color:red"
-                   
+        
+	            event-set__enter="_event: mouseenter; color: #f26fc9; animation="property: position; to: 1 0.5 1; loop: true; dur: 10000""
+      
+	      <!---     
 	      event-set__enter="_event: mouseenter; color: #f26fc9"
       
               event-set__down="_event: mousedown; position: 0.0 0.0 0.5; color: #FFFFFF"
                 event-set__up="_event: mouseup; scale: 1 1 1"
                 event-set__leave="_event: mouseleave; scale: 0.5 0.5 1">
-              
+              --->
               </a-sphere>
     </a-marker>
 	   
