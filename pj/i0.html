@@ -2,7 +2,7 @@
 v1. https://medium.com/arjs/augmented-reality-in-10-lines-of-html-4e193ea9fdbf
 v2. https://medium.com/@aschmelyun/so-you-want-to-get-started-with-ar-js-41dd4fba5f81
 
-index3c.html
+i0.html
 version 2 28/06/2020, incluyendo assets & interacción 
 
 mouse events, based on this code: 
@@ -47,25 +47,29 @@ https://glitch.com/edit/#!/a-frame-mouse-click-example?path=index.html%3A55%3A7
         
           
    </a-assets>
- 
+		
      
     <!---- 1 - logo alhambra ---> 
     <a-marker preset="custom" type='pattern' url = "https://mgea.github.io/pj/pattern-logo.patt">
 	 
     <a-box position="0 0 0"   depth="1.2" width="1.2" height="0.1" color="#FFFF00" shadow></a-box>    
 	       
-	 <a-image position="-0.2 0.4 0.2" width="0.4" height="0.9" src="#detective">
-        <a-animation attribute="position"
+	 <a-image position="-0.2 0.4 0.2" width="0.4" height="0.9" src="#detective"
+		   event-set__enter="_event: mouseenter; scale: 0.5 0.5 0.5;">
+            <a-animation attribute="position"
                dur="1000"
                fill="forwards"
-               to="0 0.5 -3"
+               to="0.8 0.4 0.2"
                direction="alternate"
-               begin="click"></a-animation>
+               begin="mouseenter"></a-animation>
         </a-image>
  
      <a-image position="-0.2 0.4 0" width="0.7" height="1.4" src="#farola"></a-image>
     
-     <a-image position="0.4 0.5 -0.1" width="0.4" height="1" src="#door">
+     <a-image position="0.4 0.5 -0.1" width="0.4" height="1" src="#door"
+	      
+	      event-set__enter="_event: mouseenter; scale: 1.2 1 1.5; position: 0.0 0.4 0.5;" >
+	     
      <!---    <a-animation attribute="position"
                dur="1000"
                fill="forwards"
@@ -97,12 +101,17 @@ https://glitch.com/edit/#!/a-frame-mouse-click-example?path=index.html%3A55%3A7
     <a-marker preset="custom" type='pattern' url = "https://mgea.github.io/pj/pattern-bodega.patt"> 
   
     <a-sphere position="0 1 0" radius="0.5" material="color:red"
-                     event-set__enter="_event: mouseenter; color: #f26fc9"
+        
+	            event-set__enter="_event: mouseenter; color: #f26fc9; animation=property: position; to: 1 0.5 1; loop: true; dur: 10000">
+                                                                                                                                         
+   
+	      <!---     
+	      event-set__enter="_event: mouseenter; color: #f26fc9"
       
-              event-set__down="_event: mousedown; scale: 1.6 1.0 1.2"
+              event-set__down="_event: mousedown; position: 0.0 0.0 0.5; color: #FFFFFF"
                 event-set__up="_event: mouseup; scale: 1 1 1"
                 event-set__leave="_event: mouseleave; scale: 0.5 0.5 1">
-              
+              --->
               </a-sphere>
     </a-marker>
 	   
@@ -148,35 +157,9 @@ https://glitch.com/edit/#!/a-frame-mouse-click-example?path=index.html%3A55%3A7
     </a-marker>   
     <!---- 6 - logo cerveza --->  
     <a-marker preset="custom" type='pattern' url = "https://mgea.github.io/pj/pattern-cerveza.patt"> 
+      <a-box position="0 0.0 0" rotation="0 45 0" color="#4CC3D9" shadow></a-box> 
+      <a-cylinder position="0 0.5 0" radius="0.5" height="1.5" color="#FFC65D" shadow></a-cylinder>
       
-        
-      <a-box position="-1 0.5 0.1" rotation="0 45 0" color="#4CC3D9" shadow
-             event-set__enter="_event: mouseenter; color: #026fc9"
-             event-set__leave="_event: mouseleave; color: #4CC3D9">
-        <!-- This animation begins when the box is clicked with the mouse. -->
-        <a-animation attribute="rotation"
-               dur="3000"
-               fill="forwards"
-               to="0 360 0"
-               direction="alternate"
-               begin="click"></a-animation>
-      </a-box>
-
-      <a-sphere position="0.8 0.75 0.2" radius="0.75" color="#EF2D5E" shadow
-                event-set__enter="_event: mouseenter; color: #026fc9"
-                event-set__leave="_event: mouseleave; color: #EF2D5E">
-        
-        <!-- This animation begins when the sphere is clicked with the mouse. -->
-        <a-animation attribute="position"
-               dur="1000"
-               fill="forwards"
-               to="0 2.5 -6"
-               direction="alternate"
-               begin="click"></a-animation>
-      </a-sphere>
-        
-        
-        
     </a-marker>   
     
      <!---  la camara sube coordenadas en android ---
@@ -184,10 +167,7 @@ https://glitch.com/edit/#!/a-frame-mouse-click-example?path=index.html%3A55%3A7
 	 <a-entity id="camera" camera="userHeight: 0.6" look-controls cursor="rayOrigin: mouse"></a-entity>  
       <a-camera look-controls position="0.0 0.0 0.0"><a-cursor></a-cursor></a-camera>  ----->
        
-  <!---  <a-entity camera><a-cursor></a-cursor></a-entity>   --->
-     
- <a-entity id="camera" ><a-cursor></a-cursor></a-entity>
-
+    <a-entity camera><a-cursor></a-cursor></a-entity>
        
        
   </a-scene>
