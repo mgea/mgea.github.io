@@ -80,25 +80,22 @@ Uso de eventos:
     <a-marker preset="custom" type='pattern' url = "https://mgea.github.io/pj/pattern-logo.patt">
 	
     <!---- BASE ---->
-    <a-box position="0 0 0"   depth="1.2" width="1.2" height="0.1" color="#d0d0c0" shadow></a-box>    
+    <a-box position="0 -0.1 0"   depth="1.2" width="1.2" height="0.1" color="#d0d0c0" shadow></a-box>    
     
-     
- <a-sphere position="-0.5 0.4 0.5" radius="0.3"  color="#ff00aa" 
-               animation="property: position; to: -0.5 1.2 0.5; dur: 2000; easing: linear; loop: true; dir:alternate " ></a-sphere>
+    <a-text value="Escena 1: la farola" color="#5c5c5c" position="-0.4 0.2 0.6" scale="0.4 0.4 0.4"></a-text>
         
- <a-sphere position="0.5 1.4 -0.5" radius="0.3"  color="#0dc0fa" 
-               animation="property: position; to: 0.5 0.2 -0.5; dur: 1500; easing: linear; pauseEvents: mouseenter; startEvents: mouseleave; loop: true; dir:alternate " ></a-sphere>
+     <a-sphere position="-0.5 0.4 0.5" radius="0.3"  color="#ff00aa" 
+               animation="property: position; to: -0.5 1.2 0.5; dur: 2000; easing: linear; loop: true; dir:alternate " 
+               event-set__enter="_event: mouseenter; _target: #farola; visible: true"></a-sphere>
+     
+
+      <a-sphere position="0.5 1.4 -0.5" radius="0.3"  color="#0dc0fa" 
+               animation="property: position; to: -0.9 1.2 -0.5; dur: 1500; easing: linear; pauseEvents: mouseenter; startEvents: mouseleave; loop: true; dir:alternate " ></a-sphere>
 	    
-	    
-	    
-	    
-            <a-entity
-  geometry="primitive: box"
-  material="color: red"
-		    position="-1.5,0.5,0.5" widht="0.3" height="0.3" depth = "0.2" 
-  animation__mouseenter="property: components.material.material.color; type: color; to: blue; startEvents: mouseenter; dur: 500";
-  animation__mouseleave="property: components.material.material.color; type: color; to: red; startEvents: mouseleave; dur: 500";
-                  ></a-entity>
+<a-image id="farola" position="-0.2 0.4 0" width="0.7" height="1.4" visible="false" src="#farola"></a-image>
+    
+   
+
     
         
    <!---     
@@ -122,7 +119,7 @@ Uso de eventos:
 --->
        
        
-	 <a-text value="Escena 1: puerta" color="#5c5c5c" position="-0.4 0.2 0.6" scale="0.4 0.4 0.4"></a-text>
+
         
 	<!-- <a-text value="encuentra la puerta de acceso " color="#ff00ff" position="-0.4 0.4 0.5" rotation="0 90 0" scale="0.4 0.4 0.4"></a-text> -->
 	  
