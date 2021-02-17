@@ -1869,9 +1869,9 @@ body,
     height: 20px;
     width: 20px; }
   .hide-for-print,
-    /* quitar footer */ 
+    /* quitar footer y tittle */ 
     .footer { display: none; }
-  .title,
+    .title {display: none;}
   .cards a,
   /*---
     .cards img {
