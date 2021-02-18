@@ -7,7 +7,7 @@ UX CheckList para Diseño de Interfaces de Usuario, Universidad de Granada (http
 
 Online version: https://mgea.github.io/DIU
 
-ver 1.1 updated 18/02/2021
+ver 1.1 updated 18/02/2021 !
 
 ### Desk Research 
 
