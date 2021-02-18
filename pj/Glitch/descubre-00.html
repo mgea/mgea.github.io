@@ -1,0 +1,71 @@
+
+!DOCTYPE html>
+<html>
+  <head>
+    <!---- GLITCH https://glitch.com/edit/#!/descubre-00?path=index.html%3A68%3A7 --->
+    <!---- https://descubre-00.glitch.me --->
+    <title>Mouse Click Example - A-Frame</title>
+    <meta name="description" content="Mouse Click Example - A-Frame">
+  
+      <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script> 
+    <!--
+    The event-set component gives you a quick way to add events
+    to elements (like click, mouseenter, mouseleave, mousedown, mouseup, and fusing)
+    without having to write Javascript for each event.
+    
+    For exmample if you want to give the user feedback when they hover over the element,
+    you can do event-set__enter="_event: mouseenter; material.color: blue"
+    -->
+    <script src="https://unpkg.com/aframe-event-set-component@^4.0.0/dist/aframe-event-set-component.min.js"></script>
+  
+  </head>
+  <body>
+    <a-scene>
+     
+     <a-assets>
+       <img id="pareja1" src="https://cdn.glitch.com/c173f1e1-7f35-4d97-959e-c75544559542%2Fbar_pareja1.png?v=1600020756258">     
+       <img id="pareja2" src="https://cdn.glitch.com/c173f1e1-7f35-4d97-959e-c75544559542%2Fbar_pareja3.png?v=1600020760307">     
+       
+       
+       <!--
+       <a-asset-item id="detective" src="assets/detective_carolina.gltf"></a-asset-item>
+        -->
+         
+     </a-assets>
+		
+      
+      
+         <!---- BASE ---->
+    <a-box position="0 -0.1 0"   depth="1.2" width="1.2" height="0.1" color="#d0d0c0" shadow></a-box>    
+    <a-text value="Escena 1: la farola on/off" color="#5c5c5c" position="-0.6 0.0 0.6" scale="0.4 0.4 0.4"></a-text>
+ 
+     <!---- ESFERAS -(movimiento/ enter/leave/ cambiaer estado otro objeto) --->
+     <a-sphere  position="-0.5 0.4 0.5" radius="0.3"  color="#ff00aa" 
+               animation="property: position; to: -0.5 1.2 0.5; dur: 2000; easing: linear; loop: true; dir:alternate " 
+               event-set__enter="_event: mouseenter; _target: #Lafarola; visible: false"></a-sphere>
+     
+
+      <a-sphere position="0.6 0.5 -0.5" radius="0.3"  color="#0dc0fa" 
+               animation="property: position; to: -0.9 0.6 -0.5; dur: 1500; easing: linear; pauseEvents: mouseenter; startEvents: mouseleave; loop: true; dir:alternate " 
+                 event-set__enter="_event: mouseenter; _target: #Lafarola; visible: true"></a-sphere>
+      <!---- FAROLA (visible/invisible)  ---> 
+      <a-image id="Lafarola" position="-0.2 0.4 0" width="0.7" height="1.0" visible="true" src="#pareja1"></a-image>
+      
+      <!---
+      <a-gltf-model src="#detective" position="0 0 0" rotation="0 0 0" scale="0.5 0.5 0.5"></a-gltf-model>
+      
+--->
+
+<!---
+     <a-entity camera look-controls position="0 1.6 0"></a-entity>
+
+       <a-entity id="camera" camera="userHeight: 1.0" look-controls cursor="rayOrigin: mouse"></a-entity>
+   --->
+    
+      
+  <a-entity position="1 1 3" id="camera" camera look-controls cursor="rayOrigin: mouse"><a-cursor></a-cursor>
+      </a-entity>
+      
+</a-scene>
+  </body>
+</html>

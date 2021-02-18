@@ -1,10 +1,12 @@
 /*!
  * LABELAUTY jQuery Plugin Styles
- *
+ 
  * @file: jquery-labelauty.css
  * @author: Francisco Neves (@fntneves)
  * @site: www.francisconeves.com
  * @license: MIT License
+ * Modificado @mgea para prettyprinting 18/02/2021 
+ * versión con printing alternativo en style2print.css
  */
 /* Prevent text and blocks selection */
 @import url("http://fonts.googleapis.com/css?family=Open+Sans:300,600");
@@ -1858,6 +1860,7 @@ body,
     font-size: 10px;
     font-weight: 400; }
   .card-content p {
+    display: none; 
     font-size: 9px;
     line-height: 12px; }
   input[type="checkbox"] {
@@ -1868,13 +1871,20 @@ body,
     height: 20px;
     width: 20px; }
   .hide-for-print,
-  .title,
+    /*------  quitar footer y tittle izda vertical----*/ 
+    .footer { display: none; }
+    .title {display: none;}
   .cards a,
-  .cards img {
+  /*--- se visualizan  imagenes 
+    .cards img {
     display: none !important; }
+    --- */
   .st-container,
   .st-pusher,
   .st-content,
+    /*--- no se visualiza contenido 
   .st-content-inner {
     height: 1000px;
-    page-break-after: auto; } }
+    page-break-after: auto; } 
+*/
+    }
