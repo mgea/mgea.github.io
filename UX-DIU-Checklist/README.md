@@ -1,7 +1,7 @@
 UX DIU Project Checklist
 ===========
 
-Start your next UX project with this checklist and don't forget anything!
+
 
 UX CheckList para Diseño de Interfaces de Usuario, Universidad de Granada (https://github.com/mgea/DIU19) 
 
