@@ -8,10 +8,10 @@ var isStop = false;
 var count = 0;
 
 function preload() {
-  imgs[0] = loadImage("ja.png");
+  imgs[0] = loadImage("mg.png");
   imgs[1] = loadImage("ja2.png");
   imgs[2] = loadImage("ja3.png");
-  imgs[3] = loadImage("mg.png");
+  imgs[3] = loadImage("ja.png");
   
 }
 
