@@ -12,15 +12,16 @@ version 1 19/04/2021, incluyendo assets.
     <meta name="description" content="DESCUBRE EL CUBO">
 	
 	 <script src="https://aframe.io/releases/1.0.0/aframe.min.js"></script>
-	     
+	 <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
        <!---
 	      <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
 	      <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script> 
 	     <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+            <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
 	-->
 
       <!--- <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.6.0/aframe/build/aframe-ar.js"></script> --->
-     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+    
 
   </head>
 
@@ -35,7 +36,9 @@ version 1 19/04/2021, incluyendo assets.
         
           
    </a-assets>
-		
+	   
+	   
+       <!---- 0 - logo hiro ---> 
       <a-marker preset="hiro">
              <a-sphere position="0 1 0" radius="0.5" material="color:yellow"></a-sphere>
         </a-marker>
@@ -85,7 +88,8 @@ version 1 19/04/2021, incluyendo assets.
       <a-cylinder position="0 0.5 0" radius="0.5" height="1.5" color="#FFC65D" shadow></a-cylinder>
       
     </a-marker>   
-    <a-entity camera></a-entity>
+	   
+    <a-entity camera><a-cursor></a-cursor></a-entity>
     <!-----
     <a-entity camera><a-cursor></a-cursor></a-entity>
  --->
