@@ -13,6 +13,6 @@ Subir contenido a github (repositorio Web)
 
 ![Marca](https://github.com/mgea/mgea.github.io/blob/master/XR/default-marker.png) 
 
-![Link](https://github.com/mgea/mgea.github.io/blob/master/XR/qr-code.png)
+![Link](https://github.com/mgea/mgea.github.io/blob/master/XR/qr-code2.png)
 
 
