@@ -12,7 +12,7 @@ Finalmente se sube contenido a github (repositorio Web)
 
 ![Marca](https://github.com/mgea/mgea.github.io/blob/master/XR/default-marker.png) 
 
-![Link](https://github.com/mgea/mgea.github.io/blob/master/XR/qr-code2.png)
+![Link](qr-codeEco.png)
 
 
 Updated: 17/05/2022
