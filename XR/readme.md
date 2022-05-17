@@ -1,18 +1,26 @@
 
 
 
-#### EJEMPLO AR3D 
-
-Creación de RA con **ARJS Studio** (https://ar-js-org.github.io/studio/) 
-
-Creación de modelo 3D con threejs editor https://threejs.org/editor/ 
-
-Subir contenido a github (repositorio Web) 
+#### EJEMPLOS REALIDAD AUMENTADA 
 
 
+## Caso 1 - Uso de  **ARJS Studio** (https://ar-js-org.github.io/studio/) 
+   Carpeta: [ar](https://github.com/mgea/mgea.github.io/tree/master/XR/ar) 
 
-![Marca](https://github.com/mgea/mgea.github.io/blob/master/XR/default-marker.png) 
+  (una sóla marca, asociar contenido imagen) 
+  
 
-![Link](https://github.com/mgea/mgea.github.io/blob/master/XR/qr-code2.png)
+## Caso 2 - Uso de  **ARJS Studio** (https://ar-js-org.github.io/studio/) 
 
+   Carpeta: [ar3D](https://github.com/mgea/mgea.github.io/tree/master/XR/ar3D) 
 
+(una  marca, asociar contenido 3D con formato gltf) 
+  
+    
+
+## Caso 3 - Uso de  **ARJS** con múltiples marcas 
+
+   Carpeta: [webvr](https://github.com/mgea/mgea.github.io/tree/master/XR/webvr) 
+
+ 
+ Updated 17/05/2022
