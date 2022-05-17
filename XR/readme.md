@@ -1,16 +1,16 @@
 
 
 
-#### EJEMPLOS REALIDAD AUMENTADA 
+## EJEMPLOS REALIDAD AUMENTADA 
 
 
-## Caso 1 - Uso de  **ARJS Studio** (https://ar-js-org.github.io/studio/) 
+### Caso 1 - Uso de  **ARJS Studio** (https://ar-js-org.github.io/studio/) 
    Carpeta: [ar](https://github.com/mgea/mgea.github.io/tree/master/XR/ar) 
 
   (una sóla marca, asociar contenido imagen) 
   
 
-## Caso 2 - Uso de  **ARJS Studio** (https://ar-js-org.github.io/studio/) 
+### Caso 2 - Uso de  **ARJS Studio** (https://ar-js-org.github.io/studio/) 
 
    Carpeta: [ar3D](https://github.com/mgea/mgea.github.io/tree/master/XR/ar3D) 
 
@@ -18,7 +18,7 @@
   
     
 
-## Caso 3 - Uso de  **ARJS** con múltiples marcas 
+### Caso 3 - Uso de  **ARJS** con múltiples marcas 
 
    Carpeta: [webvr](https://github.com/mgea/mgea.github.io/tree/master/XR/webvr) 
 
