@@ -22,5 +22,6 @@
 
    Carpeta: [webvr](https://github.com/mgea/mgea.github.io/tree/master/XR/webvr) 
 
+Herramienta para crear códigos QR: https://www.qrcode-monkey.com/es/ 
  
  Updated 17/05/2022
