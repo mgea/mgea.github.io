@@ -1,1 +1,1 @@
-dsdasd
+Personajes mediante sprites (animación para gaming)
