@@ -1,4 +1,6 @@
 /*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
+
+/**** VERSION OPTIMIZADA PARA VER BiEN EN MOVIL v. 18 Julio 2023 */
 /**
  * 1. Change the default font family in all browsers (opinionated).
  * 2. Prevent adjustments of font size after orientation changes in IE and iOS.
@@ -12,7 +14,7 @@ html {
   /* 2 */ 
 
     
-    zoom: 0.5   ;
+    zoom: 0.5   ;  /* para que se vea bien em moviles */ 
 
 
 
@@ -641,20 +643,29 @@ body {
 
 .title-container {
   position: absolute;
-  top: 25%;
-  left: 50%;
+  top: 50%;
+  left: 25%;
   transform: translate(-50%, -25%); }
-  @media (min-width: 54.75em) {
+  @media (min-width: 64.75em) {
     .title-container {
       top: 50%;
       margin: 0;
-      transform: translate(-50%, -50%); } }
+     color: #bb0;
+      transform: translate(-50%, -50%);  } }
   .title-container .title {
-    display: none; }
+     /* display: none; */ 
+     /*  top: 100px; 
+      left:30px; */
+      color: #ff0;
+     /* transform: translate(-100%, 80%);  */
+      }
     @media (min-width: 54.75em) {
       .title-container .title {
         color: #fff;
-        font-size: 2.5rem;
+          transform: translate(120%, -10%); 
+          /*  top: 50%;
+      left:50%; */
+        font-size: 1.5rem;
         display: block; } }
 
 /* Controls
@@ -683,6 +694,7 @@ body {
     color: #fff;
     font-weight: 900;
     line-height: 1.6875em;
+    margin-bottom: 25px;    /* mgea separar botones */  
     text-align: center;
     text-decoration: none;
     text-transform: uppercase;
@@ -721,7 +733,7 @@ body {
     margin-top: 0; }
 
 .question-controls {
-  width: 80%;
+  width: 98%;
   max-width: none;
   margin-left: auto;
   margin-right: auto; }
@@ -743,7 +755,7 @@ body {
     font-size: 1.5rem; }
   .question-controls .hint {
     color: #ff0;
-    font-size: 1.s5rem; }
+    font-size: 1.5rem; }
 
 .pa-controls {
   width: 80%;
@@ -769,12 +781,15 @@ body {
     text-transform: uppercase; }
 
 footer {
+  position: absolute;
+  bottom: -150px;
   width: 50%;
   height: 5vh;
   margin: 0 auto;
   text-align: center; }
   footer a,
   footer p {
+    
     color: #fff;
     font-size: .875rem;
     font-weight: 400; }
