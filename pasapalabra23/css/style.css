@@ -663,8 +663,8 @@ body {
       .title-container .title {
         color: #fff;
           transform: translate(120%, -10%); 
-          /*  top: 50%;
-      left:50%; */
+            top: 50%;
+    /*  left:50%; */
         font-size: 1.5rem;
         display: block; } }
 
