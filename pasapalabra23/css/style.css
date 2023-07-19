@@ -413,7 +413,7 @@ body {
   font-size: 1.25rem;
   font-weight: 900; }
 
-@media (min-width: 54.75em) {
+@media (min-width: 60.75em) {
   section {
     display: flex;
     height: 95vh;
@@ -427,7 +427,7 @@ body {
 .circle-container {
   padding-top: 2em;
   width: 100%; }
-  @media (min-width: 54.75em) {
+  @media (min-width: 60.75em) {
     .circle-container {
       position: relative;
       width: 50%;
@@ -501,7 +501,7 @@ body {
       transform: rotate(601.2deg) translate(7.6875em) rotate(-601.2deg); }
     .circle > *:nth-of-type(25) {
       transform: rotate(615.6deg) translate(7.6875em) rotate(-615.6deg); }
-  @media (min-width: 54.75em) {
+  @media (min-width: 60.75em) {
     .circle {
       position: relative;
       width: 22.5em;
@@ -598,7 +598,7 @@ body {
   margin: 0 0 1em 2em;
   padding: 0;
   list-style: none; }
-  @media (min-width: 54.75em) {
+  @media (min-width: 60.75em) {
     .scoreboard {
       position: absolute;
       bottom: 0;
@@ -637,7 +637,7 @@ body {
   top: 25%;
   left: 50%;
   transform: translate(-50%, -25%); }
-  @media (min-width: 54.75em) {
+  @media (min-width: 60.75em) {
     .title-container {
       top: 50%;
       margin: 0;
@@ -645,7 +645,7 @@ body {
       transform: translate(-50%, -50%); } }
   .title-container .title {
     display: none; }
-    @media (min-width: 54.75em) {
+    @media (min-width: 60.75em) {
       .title-container .title {
         color: #fff;
         font-size: 2.5rem;
@@ -656,7 +656,7 @@ body {
 .controls-container {
   padding: 2em 0;
   width: 100%; }
-  @media (min-width: 54.75em) {
+  @media (min-width: 60.75em) {
     .controls-container {
       position: relative;
       width: 50%;
@@ -693,7 +693,7 @@ body {
   max-width: none;
   margin-left: auto;
   margin-right: auto; }
-  @media (min-width: 54.75em) {
+  @media (min-width: 60.75em) {
     .ng-controls {
       position: absolute;
       top: 50%;
@@ -720,7 +720,7 @@ body {
   max-width: none;
   margin-left: auto;
   margin-right: auto; }
-  @media (min-width: 54.75em) {
+  @media (min-width: 60.75em) {
     .question-controls {
       position: absolute;
       top: 50%;
@@ -747,7 +747,7 @@ body {
   max-width: none;
   margin-left: auto;
   margin-right: auto; }
-  @media (min-width: 54.75em) {
+  @media (min-width: 60.75em) {
     .pa-controls {
       position: absolute;
       top: 50%;
