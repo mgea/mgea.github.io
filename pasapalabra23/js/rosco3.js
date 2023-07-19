@@ -157,6 +157,7 @@ function showUserScore() {
 var count = 0; // Counter for answered words
 $("#js--new-game").click(function() {
 	$("#js--ng-controls").addClass("hidden");
+    $("footer").addClass("hidden");
 	$("#js--question-controls").removeClass("hidden");
 	$("#js--close").removeClass("hidden");
 	showDefinition(count);
@@ -165,6 +166,7 @@ $("#js--new-game").click(function() {
 
 $("#js--new-game--notime").click(function() {
 	$("#js--ng-controls").addClass("hidden");
+     $("footer").addClass("hidden");
 	$("#js--question-controls").removeClass("hidden");
 	$("#js--close").removeClass("hidden");
 	showDefinition(count);
