@@ -657,7 +657,7 @@ body {
      /*  top: 100px; 
       left:30px; */
       color: #ff0;
-     /* transform: translate(-100%, 80%);  */
+     transform: translate(50px, -100px);  */
       }
     @media (min-width: 54.75em) {
       .title-container .title {
@@ -733,7 +733,7 @@ body {
     margin-top: 0; }
 
 .question-controls {
-  width: 90%;
+  width: 80%;
   max-width: none;
   margin-left: auto;
   margin-right: auto; }
@@ -755,7 +755,7 @@ body {
     font-size: 1.5rem; }
   .question-controls .hint {
     color: #ff0;
-    font-size: 1.5rem; }
+    font-size: 1.8rem; }
 
 .pa-controls {
   width: 80%;
