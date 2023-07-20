@@ -9,7 +9,7 @@
 var words = [
 	new Word(0, "A", "Empieza por A:", " Complejo monumental muy famoso creado durante el Reino Nazarí", "alhambra"),
 	new Word(1, "B", "Contiene la B:", " Barrio musulmán más antiguo de Granada  ", "albaicin","albayzin"),
-	new Word(2, "C", "Empieza por C:", " Lugar de junto a la Catedral donde están enterrados los reyes Catolicos (dos palabras)", "Capilla Real"),
+	new Word(2, "C", "Empieza por C:", " Lugar junto a la Catedral donde están enterrados los reyes Catolicos (dos palabras)", "Capilla Real"),
 	new Word(3, "D", "Empieza por D:", " Rio que pasa por Granada ", "darro"),
 	new Word(4, "E", "Empieza por E:", " Nombre de una Puerta de Granada que da acceso a una calle con el mismo nombre", "elvira"),
 	new Word(5, "F", "Empieza por F:", " Apellido de un famoso músico/compositor que paso mucho tiempo en Granada y es autor del amor brujo", "Falla"),
