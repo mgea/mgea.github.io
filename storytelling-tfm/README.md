@@ -1,21 +1,18 @@
-# CDNCAv
-Creacion y Difusion de Nuevos Contenidos Audiovisuales
-Grado en Comunicación Audiovisual
+# Creación Multimedia y Perdiodismo Multiplataforma
+Master de Nuevos medios interactivos y Periodismo Multiplataforma
+https://masteres.ugr.es/newmedia-periodismo-multimedia/
+Facultad de Comunicación y Documentación
+Universidad de Granada
 
-
-Presentacion de la asignatura 
+Presentacion de proyectos TFG/TFM
 Profesores: 
 
-- Jordi Alberich 
 - Miguel Gea 
 
 
-Versión Web online: https://utopolis.ugr.es/media/cdncav/
 
-(novela visual  Fedo, actualizada a versión 2.0.0.b16 de Monogatari.io  funciona en Chrome)
-
-ultima actualización: 17/07/2020
+ultima actualización: 30/12/2023
 
 Presentacion realizada con reveal.js https://github.com/hakimel/reveal.js/ 
 
-Granada, junio 2020
+Granada, 2018-24
