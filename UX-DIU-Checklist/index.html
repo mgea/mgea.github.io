@@ -6,7 +6,8 @@
 <!--------  CCBY @mgea para HCI/DIU. UNiversidad de Granada                  ----->
 <!--------                                                                   ----->
 <!--------  Version 0.1  basado en @sovesove @UXChecklist   (6/12/2019)      ----->
-<!--------  Version 0.2  Modificados algunos items para DIU21 (17/02/2021)      ----->    
+<!--------  Version 0.2  Modificados algunos items para DIU21 (17/02/2021)  ----->
+<!--------- Version 1.0 Modificado orden de items para DIU23 (31/01/2023)   ------>
 <!-------   Thanks to https://github.com/uxchecklist/uxchecklist.github.io   ----->
 <!--------            Images: uxdesign.cc                                    -----> 
 <!----- Checklist:                                                           ----->
@@ -56,41 +57,12 @@
        
     </header>
     <form id="checklist-form" method="POST">
-        <!-- FILA 1: RESEACH ***********************************************************   -->
+        
+        <!-- FILA 1: RESEACH ***********************************************   -->
         <div class="row clearfix">
             <div id="Research" class="title"><span>Research</span></div>
-            
-            <!-----  Competitive Analysis   ----->
-            <div class="cards">
-                <div class="img">
-                    <img class="left" src="img/icons128/Competitive.png" alt="">
-                </div>
-                <div class="card-content left">
-                    <label for="checkbox1">Competitive Analysis</label>
-                    <p>See how others solve similar problems and try to not reinvent the wheel. <a class="more hide-for-print" href="http://boxesandarrows.com/competitive-analysis-understanding-the-market-context/" target="_blank">Read more<span class="visually-hidden"> about Competitive Analysis: Understanding the Market Context</span></a></p>
-                </div>
-                <div class="right">
-                    <input id="checkbox1" type="checkbox">
-                </div>
-            </div>
-            
-            
-            
-            
-            <!-----  Usability reviews   ----->
-            <div class="cards">
-                <div class="img">
-                    <img class="left" src="img/icons128/usabilityReview.png" alt="">
-                </div>
-                <div class="card-content left">
-                    <label for="checkbox2">Usability Review</label>
-                    <p>Heuristic review determining how usable a site is entails working through a checklist <a class="more hide-for-print" href="http://www.uxforthemasses.com/usability-reviews/" target="_blank">Read more </a></p>
-                </div>
-                <div class="right">
-                    <input id="checkbox2" type="checkbox">
-                </div>
-            </div>
-            <!-----  Etnography research   ----->
+             
+             <!-----  Etnography research   ----->
             <div class="cards">
                 <div class="img">
                     <img class="left" src="img/icons128/etnography_grub.png" alt="">
@@ -107,8 +79,46 @@
                     <input id="checkbox3" type="checkbox">
                 </div>
             </div>
+            
+            
+            <!-----  Empathy map   ----->
+            <div class="cards clearfix">
+                <div class="img">
+                    <img class="left" src="img/icons128/empathyMap.png" alt="">
+                </div>
+                <div class="card-content left">
+                    <label for="checkbox6">Empathy Map</label>
+                    <p>An Empathy Map is a  tool that can help you to synthesise your observations and identify unexpected insights about your user’s needs.<a class="more hide-for-print" href=" https://www.interaction-design.org/literature/article/empathy-map-why-and-how-to-use-it " target="_blank">Read more<span class="visually-hidden"> about empathy mapping</span></a></p>
+                </div>
+                <div class="right">
+                    <input id="checkbox6" type="checkbox">
+                </div>
+            </div>
+            
+            
+            
+            <!-----  Competitive Analysis   ----->
+            <div class="cards">
+                <div class="img">
+                    <img class="left" src="img/icons128/Competitive.png" alt="">
+                </div>
+                <div class="card-content left">
+                    <label for="checkbox1">Competitive Analysis</label>
+                    <p>See how others solve similar problems and try to not reinvent the wheel. <a class="more hide-for-print" href="http://boxesandarrows.com/competitive-analysis-understanding-the-market-context/" target="_blank">Read more<span class="visually-hidden"> about Competitive Analysis: Understanding the Market Context</span></a></p>
+                </div>
+                <div class="right">
+                    <input id="checkbox1" type="checkbox">
+                </div>
+            </div>
+            
+          
+          
+           
+            
         </div>
-        <!-- FILA 2: USERS ***********************************************************   -->
+        
+
+        <!-- FILA 2: USER RESEARCH ******************************   -->
         
         <div class="row clearfix">
             <div id="Research" class="title"><span>Users</span></div>
@@ -141,19 +151,23 @@
                     <input id="checkbox5" type="checkbox">
                 </div>
             </div>
-            <!-----  Empathy mapping   ----->
-            <div class="cards clearfix">
+           
+              
+            <!-----  Usability reviews   ----->
+            <div class="cards">
                 <div class="img">
-                    <img class="left" src="img/icons128/empathyMap.png" alt="">
+                    <img class="left" src="img/icons128/usabilityReview.png" alt="">
                 </div>
                 <div class="card-content left">
-                    <label for="checkbox6">Empathy Map</label>
-                    <p>An Empathy Map is a  tool that can help you to synthesise your observations and identify unexpected insights about your user’s needs.<a class="more hide-for-print" href=" https://www.interaction-design.org/literature/article/empathy-map-why-and-how-to-use-it " target="_blank">Read more<span class="visually-hidden"> about empathy mapping</span></a></p>
+                    <label for="checkbox2">Usability Review</label>
+                    <p>Heuristic review determining how usable a site is entails working through a checklist <a class="more hide-for-print" href="http://www.uxforthemasses.com/usability-reviews/" target="_blank">Read more </a></p>
                 </div>
                 <div class="right">
-                    <input id="checkbox6" type="checkbox">
+                    <input id="checkbox2" type="checkbox">
                 </div>
             </div>
+    
+            
         </div>
 
         
@@ -177,7 +191,7 @@
                 </div>
             </div>
             
-            <!-----  SCAMPER    ----->
+            <!-----  Point of view    ----->
             <div class="cards clearfix">
                 <div class="img">
                     <img class="left" src="img/icons128/POV.png"     alt="">
@@ -292,8 +306,33 @@
                     <input id="checkbox13" type="checkbox">
                 </div>
             </div>
+
+             <!-----  GUIDELINES   ---->
+            <div class="cards clearfix">
+                <div class="img">
+                    <img class="left" src="img/icons128/guidelines.png" alt="">
+                </div>
+                <div class="card-content left">
+                    <label for="checkbox17">Guidelines</label>
+                    <p> UI guidelines explain the best practices of UI components and understanding of their behavior by giving real examples.  <a class="more hide-for-print" href=" https://uxplanet.org/why-you-need-ui-guidelines-d380e407b759" target="_blank">Read more <span class="visually-hidden"> about guidelines</span></a></p>
+                </div>
+                <div class="right">
+                    <input id="checkbox17" type="checkbox">
+                </div>
+            </div>
             
-            <!-----  Wireframing    ----->
+            
+            
+            
+            
+        </div>
+      
+     <!-- FILA 6:   DESIGN     **************************************************   -->
+    
+        <div class="row clearfix">
+            <div id="Design" class="title"><span>Design</span></div>
+           
+          <!-----  Wireframing    ----->
             <div class="cards clearfix">
                 <div class="img">
                     <img class="left" src="img/icons128/Wireframes.png" alt="">
@@ -308,16 +347,6 @@
             </div>
 
             
-            
-            
-        </div>
-      
-     <!-- FILA 6:   USABILITY     **************************************************   -->
-    
-        <div class="row clearfix">
-            <div id="Design" class="title"><span>Design</span></div>
-           
-          
             <!----- UI Patterns    ---->
             <div class="cards clearfix">
                 <div class="img">
@@ -332,19 +361,7 @@
                 </div>
             </div>
             
-            <!-----  GUIDELINES   ---->
-            <div class="cards clearfix">
-                <div class="img">
-                    <img class="left" src="img/icons128/guidelines.png" alt="">
-                </div>
-                <div class="card-content left">
-                    <label for="checkbox17">Guidelines</label>
-                    <p> UI guidelines explain the best practices of UI components and understanding of their behavior by giving real examples.  <a class="more hide-for-print" href=" https://uxplanet.org/why-you-need-ui-guidelines-d380e407b759" target="_blank">Read more <span class="visually-hidden"> about guidelines</span></a></p>
-                </div>
-                <div class="right">
-                    <input id="checkbox17" type="checkbox">
-                </div>
-            </div>
+           
             
              <!-----  Mockup     ----->
             <div class="cards clearfix">
@@ -369,7 +386,7 @@
             <div id="Testing" class="title"><span>Testing</span></div>
           <!--  <div id="usability" class="title"><span>Usability</span></div>  --->
             
-            <!-----  Prototype     ----->
+            <!-----  5" Test     ----->
             <div class="cards clearfix">
                 <div class="img">
                     <img class="left" src="img/icons128/5seconds.png" alt="">
@@ -397,30 +414,7 @@
                 </div>
             </div>
             
-            <!-----  A/B Testing     ----->
-            <div class="cards clearfix">
-                <div class="img">
-                    <img class="left" src="img/icons128/ABtesting.png" alt="">
-                </div>
-                <div class="card-content left">
-                    <label for="checkbox21">A/B Testing</label>
-                    <p> Experiment ( split testing) method for comparing two versions of something to determine which one is more successful.<a class="more hide-for-print" href=" https://www.smashingmagazine.com/2010/06/the-ultimate-guide-to-a-b-testing/" target="_blank"> Read more<span class="visually-hidden"> about How design can help with inclusion</span></a></p>
-                </div>
-                <div class="right">
-                    <input id="checkbox21" type="checkbox">
-                </div>
-            </div>
-        </div>
-        
-   
-        
-          <!-- FILA 8:  Testing USABILIDAD & ACCESIBILIDAD      **************************************************   -->
-    
-        
-        
-        <div class="row clearfix">
-            <div id="Testing" class="title"><span>Testing</span></div>
-            <!-----  Questionaries     ----->
+             <!-----  Questionaries     ----->
             <div class="cards clearfix">
                 <div class="img">
                     <img class="left" src="img/icons128/Survey.png" alt="">
@@ -434,7 +428,34 @@
                 </div>
             </div>
             
-            <!-----  Heatmap      ----->
+           
+        </div>
+        
+   
+        
+          <!-- FILA 8:  Testing USABILIDAD & ACCESIBILIDAD      **************************************************   -->
+    
+        
+        
+        <div class="row clearfix">
+            <div id="Testing" class="title"><span>Testing</span></div>
+           
+            
+            <!-----  A/B Testing     ----->
+            <div class="cards clearfix">
+                <div class="img">
+                    <img class="left" src="img/icons128/ABtesting.png" alt="">
+                </div>
+                <div class="card-content left">
+                    <label for="checkbox21">A/B Testing</label>
+                    <p> Experiment ( split testing) method for comparing two versions of something to determine which one is more successful.<a class="more hide-for-print" href=" https://www.smashingmagazine.com/2010/06/the-ultimate-guide-to-a-b-testing/" target="_blank"> Read more<span class="visually-hidden"> about How design can help with inclusion</span></a></p>
+                </div>
+                <div class="right">
+                    <input id="checkbox21" type="checkbox">
+                </div>
+            </div>
+            
+            <!-----  Eye Tracking / Heatmap      ----->
             <div class="cards clearfix">
                 <div class="img">
                     <img class="left" src="img/icons128/eye-tracking.png" alt="">
@@ -583,7 +604,7 @@
 
         <!------ FOOTER ---------->
             
-         UX DIU CheckList 2021 -  Basado en <a href="http://uxchecklist.github.io/" target="_blank">@sovesove @UXChecklist</a> &nbsp; References:
+         UX DIU CheckList 2021-23   Basado en <a href="http://uxchecklist.github.io/" target="_blank">@sovesove @UXChecklist</a> &nbsp; References:
         <a href="https://uxdesign.cc/ux-design-methods-deliverables-657f54ce3c7d" target="_blank">UXDESIGN.CC</a>&nbsp; Alternative Toolkits: <a href="https://blog.usejournal.com/the-ux-designers-toolkit-26-methods-tutorials-and-free-templates-8dc3487111a3" target="_blank">Userjournal</a>    Github: <a href="https://github.com/mgea/UX-DIU-Checklist" target="_blank"> UX [DIU] Project Checklists</a> 
           
     </footer>
@@ -692,3 +713,8 @@
 </body>
 
 </html>
+
+
+
+
+
