@@ -1,480 +1,398 @@
-<!DOCTYPE html>
-<!--- PLANTILLA mgea.github.io ver.1.1            -->
-<!---- actualizada 17/02/2020                  ----->
-<!---- enlaces a DIU                           ----->
+<html>
+<!------ mgea.github.io (index cards)                 ---->
+<!------ CCBYNCSA mgea, Jan 2024 v1.0                          ---->
+<!------ based on https://codepen.io/FrankieDoodie/pen/oPbMpQ   ---> 
+<!------ img cards de https://codepen.io/codingtuting/pen/XWrBgQz --->
+<!----- cards effects https://codepen.io/szalaigabor1989/pen/QWoZNzL --->
+<!----- neumorphic design https://neumorphic.design/ -------------->
+<!----- card filter https://codepen.io/porsake/pen/GRqobQq  ----->
+<!------ Grid Card Responsive Layout ------------------------------->
 
-
-
-
-<html lang="es">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <title> -mgea github- </title>
-      
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
-      
-
-    <!-- AUDIOFade INCLUIR MODO LOCAL -->
-        <script src="js/jquery.js"></script>
-        <script src="js/AudioFade.js"></script>
-      
-       <!-- Plugin Template CSS -->
-
-    <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet" type="text/css">
-      <!-- From https://www.w3schools.com/bootstrap4/bootstrap_get_started.asp -->
-     
-      
-         
-<!-- incrustado el CSS -->         
- <style>
-     
-     body {   /* pantalla comleta */
-        height: 100%;
-        margin: 0;
-        padding: 0;
-           background-color: #202020;
-         color: blue;
-         font-size: 20px;
-        }
     
-
-.fs {
-    /* height: 100vh;   */ }
-
-.slide {
-  position: relative; } 
-        
-.titulos {
-    /*  background-color: antiquewhite; */
-    
-     }   
-     
-.wrapper {
-  /*  padding-top: 80vh; */
-  /*  font:  bold 12px/30px Georgia, serif; */
- opacity: 1; 
-    color: whitesmoke;
-    text-shadow: 2px 2px #000000;
-    shape-margin: 10px;
-    font-size: 25px;
-    text-align: center;
-    position: relative;
-    z-index: 2; }
-     
+<head>
+  <meta charset="UTF-8"> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
  
- #diapositiva1  {
-    background: no-repeat center center;
-     opacity: 1; 
-     background-image: url(img/etsiit.jpg);
-     background-size: cover; 
-     }
- #diapositiva2  {
-     background: no-repeat center center;
-     opacity: 1; 
-     background-image: url(img/bbaa.JPG);
-     background-size: cover; 
-     }
-        
-#diapositiva3  {
-    background: no-repeat center center;
-     opacity: 1; 
-     background-image: url(img/fcd.jpg);
-     background-size: cover; 
-     } 
-#diapositiva4  {
-    background: no-repeat center center;
-     /* opacity: 0.4; */
-     background-image: url(img/ideapolis.JPG);
-     background-size: cover; 
-     } 
-        
-div.gallery {
-    margin-top: 10px;
-   padding: 50px;
-      opacity: 0.8;   
-    border: 3px solid #ccc;
-  /*  float: left; */
-    border-radius: 20px 20px 0 0;
- /*   width: 180px; */
+ @import url('https://fonts.googleapis.com/css?family=Special+Elite');  
+
+body {
+  font-family: "Roboto", sans-serif;
+  background: #EEF0F4;
+  padding: 10px 0;
+  margin: 2vw;
 }
 
-div.gallery:hover {
-    border: 1px solid #777;
-  background-color: #FFA07A;
-    filter: grayscale(100%);
-  transform: rotate(3deg);
+h1 {
+        
+    font-family: 'Special Elite', cursive; 
+    color:darkslategray;
+    font-size: 24px;
+    }
+
   
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-gap: 20px;
+  align-items: stretch;
 }
 
-div.gallery img {
-    width: 100%;
-    border-radius: 50%;
-    height: auto;
+.grid > article {
+/*  border: 1px solid #ccc; */
+  position:relative;   /** para establecer posiciones fijas en card (link inferior) */ 
+  height: 350px;       /** para asignar tamaño altura fijo a cards */
+  box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+    
+  background: #EEF0F4;
+border-radius: 15%;
+box-shadow: 9.91px 9.91px 15px #D9DADE, -9.91px -9.91px 15px #FFFFFF;
+}
+    
+    
+.grid > article:hover {
+ background: linear-gradient(145deg, #CDCFD2, #FFFFFF);
+border-radius: 15%;
+box-shadow: inset 9.91px 9.91px 15px #D9DADE, inset -9.91px -9.91px 15px #FFFFFF;
+   cursor: pointer;
+
+    
 }
 
-div.desc {
-    padding: 12px;
-    text-align: center;
-   font-family: Verdana, Geneva, sans-serif;
+    
+    
+    
+.grid > article img {
+  max-width: 100%;
+    height: 200px;
+
+  border-radius: 35px;
+
 }
 
+.grid > article .text {
+  padding-left: 20px ;
+  padding-top: 0px;
+  ;
+}
+
+
+.grid > article > .label  {
+    /* tipo de preservación **/ 
+    font-family: 'Special Elite', cursive; 
+    position: absolute;
+    background: #cacaf5;
+    right:10%;
+    top:250px;
+}
+    
+.grid > article > .link {
+       font-family: 'Special Elite', cursive; 
+        position: absolute;
+        text-align: center;
+        color: black;
      
+        left: 5%;
+         bottom: 3%;
+         width: 85%;
+        border-radius: 15px;
+        color: darkslategrey;
+      /* text-emphasis: 15px; */
+         padding: 0.5em;
+         background-color: #0acaf5; 
+      
+       font-size: 16px; 
+}
+
+
+footer {
+    margin-top: 25px;
+    padding: 15px; 
+    width: 98%;
+     font-family: 'Special Elite', cursive; 
+     font-size: 16px; 
+      background: #EEF0F4;
+border-radius: 10%;
+box-shadow: 9.91px 9.91px 15px #D9DADE, -9.91px -9.91px 15px #FFFFFF;
+    
+    }
+    
+    h2 {
+        margin-top: 0;
+    }
+    
+    p {
+        margin:0px;
+    }
+
+    
+    
+ .card-image {
+   /*  background: #EEF0F4;
+border-radius: 15%;
+box-shadow: inset 9.91px 9.91px 15px #D9DADE, inset -9.91px -9.91px 15px #FFFFFF;
+**/    
+        position: relative;
+        margin: auto;
+        overflow: hidden;
+        width: 80%;
+        height: 200px;
+        padding: 20px;
+        border-radius: 15px ;
+        transition: all .2s ease-in-out; 
+        }
+
+.card-image:hover {
+        
+         -webkit-transform: scale(1.05);
+            -moz-transform: scale(1.05);
+            -o-transform: scale(1.05);
+            transform: scale(1.05);
+    }
+
      
-     
-    </style>
+
+    
+    
+    
+/*****Filtros ****/
+/*****************/    
+
+    
+    .button {
+         font-family: 'Special Elite', cursive; 
+         font-size: 16px; 
+        width: 80px;
+        height: 30px;
+        border-radius: 15px;
+        
+    }
+    
+    .button:hover {
+        background-color: darkturquoise;
+    }
+    
+.hide {
+  display: none;
+}
+
+    
+</style>
+  
+
 
 </head>
+
+    
 <body>
+    <!--------- CABECERA Y FILTROS ------------------------>
+    <div style="display:flex; justify-content: space-between;">
+        <!---- flex: https://codepen.io/Mandal/pen/eppRGV ---->
+       <div>
+         <h1><a href="https://mgea.github.io"> <img src="./img/mggithub.png" style="height: 30px" ></a> Miguel Gea portfolio</h1>
+       </div>
+    <div>
 
-<!--- CONTENEDOR  BOOSTRAP -->    
-<div class="container-flow">
-    
-<!--- MENU NAVEGACION FIJADO TOP + RESPONSIVE-->    
-<nav class="navbar navbar-expand-sm fixed-top navbar-light  bg-light text-primary ">
-
-    <!-- Navbar brand -->
-    <a class="navbar-brand" href="#">mgea  <i class="fa fa-fw fa-github"></i> </a>
-
-    <!-- Collapse button -->
-    <button class="navbar-toggler toggler-example" type="button" data-toggle="collapse" data-target="#menu_contraido"  ><span class="dark-blue-text"><i class="fa fa-bars fa-1x"></i></span></button>
-
-    <!-- Collapsible content -->
-    <div class="collapse navbar-collapse" id="menu_contraido">
-
-        <!-- Enlaces menu -->
-        <ul class="navbar-nav mr-auto">
-             <li class="nav-item active ">
-                <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item ">
-                <a class="nav-link" href="#diapositiva1">DIU</a>
-            </li>
-            <li class="nav-item ">
-                <a class="nav-link" href="#diapositiva2">CMI</a>
-            </li>
-            <li class="nav-item ">
-                <a class="nav-link" href="#diapositiva3">CDNCAv</a>
-            </li>
-            <li class="nav-item ">
-                <a class="nav-link" href="#autor">
-                    
-                    <i class="fa fa-user" style="color:darkgray;"></i> Autor
-                </a>
-            </li>
-        </ul>
-        <!-- Links -->
-
+      <h1 style="align: right"> Filter: <button class="button button_all" data-filter="all">All</button>
+      <button class="button type_diu" data-filter="DIU">DIU</button>
+      <button class="button type_cmi" data-filter="CMI">CMI</button>
+      <button class="button type_comav" data-filter="COMAV">COM_AV</button></h1>
+      </div>
     </div>
-    <!-- Collapsible content -->
+  <div class="container">
+  <main class="grid">
+  
+    <!---------------    UX Checklist    ---------------------------->
+    <article class="DIU" onclick= OpenPage("https://mgea.github.io/UX-DIU-Checklist/index.html")>
+          
+     <div class="card-image" > <img src="https://blog.uxfol.io/wp-content/uploads/2022/07/UX-Project-Checklist.png" ></div>
+      <div class="label"> DIU</div>
+      <div class="text">
+          
+        <h2>UX Checklist   </h2>
+        <p>Experiencia de Usuario, UX tools, methods </p> 
 
-</nav>
-    
-<!--------- CONTENEDOR -------> 
-
-    <div class="container-flow">
- 
-<audio loop id="audio1" src="sound/1.mp3"></audio>
-<audio loop id="audio2" src="sound/2.mp3"></audio>
-<audio loop id="audio3" src="sound/3.mp3"></audio>
- <audio loop id="audio4" src="sound/4.mp3"></audio>       
-
-         
+        </div>  
+    </article>
+     
+    <!---------------    User persona/Journey       ---------------------------->
+    <article class="DIU" onclick= OpenPage("file:///Users/mgea/Software/Github/mgea.github.io/UX-DIU-Toolkit/index.html")>
+        <div class="card-image" > <img src="https://www.konrad.com/app/uploads/2021/04/UX-Research-Method-User-Persona-Main-Example.svg" ></div>
+        <div class="label"> DIU</div>
+      <div class="text">
+          
+        <h2>Persona   </h2>
+        
+        <p>Experiencia de Usuario, Ideación, sketching & prototipado </p>  
+      </div>
+        
+        
+    </article>
    
-<!--------- INTRO -------> 
-      
-       <article id="diapositiva4" class="slide fs">
-                      <div class="bcg"></div>  
-                <div class="wrapper">
-                    <header class="titulos">
-                        
-                        <h1>....</h1>
-                    </header>
-                    <section>
-                       Diseño, Creación multimedia, Storytelling, UX 2020
-                        <h1>Recursos Creative Commons</h1>
-                    </section>
-                </div> <!-- .wrapper -->
-            </article>
+      <!---------------    User persona/Journey       ---------------------------->
+    <article class="DIU" onclick= OpenPage("file:./UX_Checklist_Cheatsheet.pdf")>
+        <div class="card-image" > <img src="./img/ux_checklist.png" ></div>
+        <div class="label"> DIU</div>
+      <div class="text">
+          
+        <h2>UX Cheatsheet   </h2>
         
-        </div>   <!-- FIN CONTENEDOR --> 
-
-        
-        
-        
-        
-<!--------- DIU1: UX-check-list -------> 
-    
-    
- <article id="diapositiva1" class="slide fs">
-     
-  <div class="row">    
-      
-      <div class="col-sm-4 card  gallery">
-       
-        <a href="UX-DIU-Checklist/index.html">
-            <img class="card-img-top" src="img/ux_checklist.png" alt="Card image cap"></a>
-   <div class="card-body">
-       <h4 class="card-title">UX CHECK LIST </h4>
-       <a href="UX-DIU-Checklist/index.html" class="btn btn-primary"> Plantilla de recursos UX </a>
-    
- 
-      </div>
-      </div>    
-      
- <!--------- DIU2: UX-TOOLKIT (user persona / journey Map)  -------> 
-<div class="col-sm-4  card  gallery">
-       
-                
- <a href="UX-DIU-Toolkit/index.html">
-            <img class="card-img-top" src="img/ux_toolkit.png" alt="Card image cap"></a>
-  <div class="card-body">
-    <h4 class="card-title">UX Toolkit</h4>
-       <a href="UX-DIU-Toolkit/index.html" class="btn btn-primary"> Plantilla Persona/JourneyMap</a>
-    
-  </div>
-</div>
-      
-
-
-<!--------- DIU3: UX-CHEATSHEET   -------> 
-      
-<div class="col-sm-4  card  gallery">
-       
-                
- <a href="UX_Checklist_Cheatsheet.pdf">
-            <img class="card-img-top" src="img/ux_toolkit.png" alt="Card image cap"></a>
-  <div class="card-body">
-    <h4 class="card-title">UX Toolkit cheatsheet</h4>
-       <a href="UX_Checklist_Cheatsheet.pdf" class="btn btn-primary"> Plantilla imprimible</a>
-    
-  </div>
-      </div>
-      
-      
-       <div class="wrapper" >
-                    
-                        <h3>Diseño de Interfaces de Usuario (DIU) </h3>
-            
-    
-                </div> <!-- .wrapper -->
-
-    </div> <!---- /ROW --->
-      
- </article>
-    
-    
-  <!--------- CMI1: PLANTILLA   ------->   
-    
-        
-       <article id="diapositiva2" class="slide fs">
-    <div class="row">    
-      
-      <div class="col-sm-4 card  gallery">
-       <img class="card-img-top" src="http://utopolis.ugr.es/media/scrollsound/img/2.jpg" alt="Card image cap">
-  <div class="card-body">
-    <h4 class="card-title">Plantilla HTML</h4>
-    <p class="card-text">Plantilla para incrustar prácticas de Hippani en página Web</p>
-    <a href="http://mgea.github.io/cmi" class="btn btn-primary">Acceder</a>
-  </div>
+        <p>Experiencia de Usuario, Ideación, sketching & prototipado </p>  
       </div>
         
         
-        
-        <!--------- CMI2: PLANTILLA   ------->   
+    </article>
+   
       
-    <div class="col-sm-4  card  gallery">
+    
+       <!---------------    Sesión 3       ---------------------------->
+    <article onclick= OpenPage("https://editorial.centroculturadigital.mx/eliteratura")>
+        <div class="card-image"> <img src="https://elpilardigital.com/wp-content/uploads/2022/08/elpilardigital_storytelling-scaled.jpg" alt="Sample photo" ></div>
        
-                 <img class="card-img-top" src="http://utopolis.ugr.es/media/scrollsound/img/2.jpg" alt="Card image cap">
-  <div class="card-body">
-    <h4 class="card-title">CMI - Ejemplo diseño prácticas </h4>
-    <p class="card-text"> Prueba de integración de prácticas en HTML en una plantilla (Github.io) </p>
-    <a href="#" class="btn btn-primary">Acceder</a>
-  </div>
+       <div class="text">
+          
+        <h2>Storytelling  </h2>
+        <p>Storytelling digital, long-form, inmersivo, aumentado</p>  
       </div>
         
-        
-        
-        <!--------- CMI3    : PLANTILLA   ------->   
-              <div class="col-sm-4 card  gallery">
        
-                 <img class="card-img-top" src="http://utopolis.ugr.es/media/scrollsound/img/2.jpg" alt="Card image cap">
-  <div class="card-body">
-    <h4 class="card-title">CMI3</h4>
-    <p class="card-text">dddddd</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
-             
-      </div>
-
-
-        </div>
-
-            <div class="wrapper" >
-                    
-                        <h3>Creación Multimedia Interactiva (DIU) </h3>
-            
-                      
-                </div> <!-- .wrapper -->
-     
-                
-     
- </article>
-    
-        
-        
- <!------- CDNCAv -------> 
-    
-        
-            <article id="diapositiva3" class="slide fs">
-    <div class="row">    
+    </article>
       
-      <div class="col-sm-4 card  gallery">
-       
-      
-        <img class="card-img-top" src="img/scrollytelling_mini.png" alt="Card image cap">
-  <div class="card-body">
-    <h4 class="card-title">CDNCAv</h4>
-    <p class="card-text">Plantilla de Scrollytelling</p>
-    <a href="http://utopolis.ugr.es/media/st/" class="btn btn-primary">Acceder ></a>
-  </div>
+   
+    <!---------------    Sesión 4       ---------------------------->
+    <article>
+        <div class="card-image"> <img src="https://cdnp2.stackassets.com/5e1653998e6e0194958707b8d0cced203b80cfba/store/opt/596/447/29f844cbec715c585a1be01897fa8bcb2292e4c6b118125ed68ddcfdd4c2/product_185139_product_shots1.jpg" alt="Sample photo" ></div>
+      <div class="text">
+          
+        <h2>Diseño & Interacción  </h2>
+        <p> </p>  
       </div>
-      
-    <div class="col-sm-4  card  gallery">
-       
-                 <img class="card-img-top" src="img/media4ux.png" alt="...">
-  <div class="card-body">
-    <h4 class="card-title">CDCAv</h4>
-    <p class="card-text"> card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
-      </div>
-              <div class="col-sm-4 card  gallery">
-       
-                 <img class="card-img-top" src="img/media4ux.png" alt="..">
-  <div class="card-body">
-    <h4 class="card-title">CDCAv</h4>
-    <p class="card-text">dddddd</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
-             
-      </div>
-
-
-        </div>
-
-            <div class="wrapper" >
-                    
-                        <h3>Creación y Difusión de Nuevos contenidos Audiovisuales (CDNCAv) </h3>
-            
-                      
-                </div> <!-- .wrapper -->
-     
-                
-     
- </article>
         
-
-    
-    
-    
         
+    </article>
+        
+   
+    <!---------------    Master Journalism      ---------------------------->
+    <article class="COMAV" onclick= OpenPage("./master.html")>
+        <div class="card-image"> <img src="https://cdn.vox-cdn.com/thumbor/oulgNYAI6_GNIpAhensHjmGAnH8=/0x0:6244x3500/1200x800/filters:focal(2623x1251:3621x2249)/cdn.vox-cdn.com/uploads/chorus_image/image/62641921/shutterstock_721678087.0.jpg" alt="Master index" ></div>
+        <div class="label"> ComAV</div>
+      <div class="text">
+          
+        <h2>Master journalism  </h2>
+        <p> Creación Multimedia y Periodismo Multiplataforma</p>  
+      </div>
+        
+        
+    </article>
+        
+           
+<!---------------   Sesión 6    ---------------------------->
+    <article>
+        <div class="card-image"> <img src="https://www.freecodecamp.org/espanol/news/content/images/2022/07/ferenc-almasi-NzERTNpnaDw-unsplash.jpg" alt="Wayback Machine" ></div>
+      <div class="text">
+          
+        <h2>Multimedia HTML5</h2>
+          <p> </p>
+        
+      </div>
+        
+        
+    </article>
+      
+           
+<!---------------   Sesión 7      ---------------------------->
+    <article>
+        <div class="card-image"> <img src="https://marvel-b1-cdn.bc0a.com/f00000000277771/www.bsu.edu/-/media/www/departmentalcontent/computerscience/images/game-design-1200.jpg"  ></div>
+      <div class="text">
+          
+        <h2>Games</h2>
+          <p>GDD, Game engine, plataformas </p>
+        
+      </div>
+        
+        
+    </article>
+      
+  <!---------------   mgea    ---------------------------->
+   
+    <article  onclick= OpenPage("file:./CVmgea-en.pdf")>
+        <div class="card-image" > <img src="https://avatars.githubusercontent.com/u/32359091" style="filter: grayscale(60%);" alt="Miguel Gea"></div>
+        
+      <div class="text">
+          
+        <h2>Acerca de   </h2>
+        
+        <p>CV resumido en inglés </p>  
+      </div>
+        
+        
+    </article>
+   
+      
+      
+      
+  </main>
        
-    
-
-    
-<!--- PRESENTACION -->  
-<div class="container-flow bg-dark text-white"  id="inicio" style="padding-top: 100px; padding-bottom: 50px" >
-
-    </div>
-    
-    
-    
-<!--- CONTENIDO -->  
-
-<div class="container-flow bg-light text-white" height="100%" id="animacion" >
-     
-    
+ <footer>
+      CC BYNCSA mgea, 2018-2024 
+ </footer>
 </div>
     
-<!--- FOOTER- CREDITOS blanco sobre negro-->  
     
-<div class="container-flow bg-dark text-white"  id="autor">
     
-    <div class="col-12 col-md-6 text-white">
-      
-    </div>
-        
-  <div class="row">  
-     <div class="col-sm-2 offset-sm-1" >
-          <img src="img/mg.jpg" class="rounded-circle"> 
-        </div>
-                                                                    
-                                                                 
-     <div class="col-sm-8 offset-sm-1 text-white" >
-         <pre class="text-white">
-Autor:  
-Miguel Gea 
-Dpt. Lenguajes y Sistemas Informáticos
-Universidad de Granada  
-<i class="fa fa-creative-commons"></i> CCBY media4ux, 2020
-</pre>
-           <ul class="list-inline">
-              <li class="list-inline-item">
-                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="http://utopolis.ugr.es" target="_blank">
-                  <i class="fa fa-fw fa-wordpress "></i>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="https://github.com/mgea" target="_blank">
-                  <i class="fa fa-fw fa-github"></i>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="https://twitter.com/media4Ux" target="_blank">
-                  <i class="fa fa-fw fa-twitter"></i>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="https://www.linkedin.com/in/miguel-gea-2822667/" target="_blank">
-                  <i class="fa fa-fw fa-linkedin"></i>
-                </a>
-              </li>
-             
-             
-             <li class="list-inline-item">
-                <a class="btn btn-outline-light btn-social text-center rounded-circle" href="https://es.slideshare.net/mgea" target="_blank">
-                  <i class="fa fa-fw fa-slideshare"></i>
-                </a>
-              </li>
-            </ul>
-   
-      </div>
-         
-         
+    
+<script> 
+    
+    
+function  OpenPage(s) {
+  // abrir link en nuevo tab
+  //  alert(s);
+    window.open( s, "_blank");
+}
 
-    </div>      <!-- ROW --> 
+
+/**** Filters: ****/
     
-   </div>   <!-- FOOTER --> 
+function myapp() {
     
-</div>   <!-- contenedor boostrap --> 
-                                                  <!-- AudioFade.js Inicializacion      -->           
-<script type="text/javascript"> 
-    /*
-     $(function() {
-        var first = new AudioFade('#audio1', 10, 300, 200).init();
-        var second = new AudioFade('#audio2', 350, 600, 550).init();
-        var third = new AudioFade('#audio3', 650, 800,700).init();
-          var third = new AudioFade('#audio4', 800, 1500, 1300).init();
-     });
-**/
-    </script> 
+  const buttons = document.querySelectorAll(".button");
+  const cards = document.querySelectorAll("article");
+ // cards.forEach((element) => console.log(element));
+  function filter(category, items) {
+      items.forEach((element) => console.log(element));
+    items.forEach((item) => {
+         
+       console.log(items[0].toString);
+      const isItemFiltered = !item.classList.contains(category);
+      const isShowAll = category.toLowerCase() === "all";
+
+      if (isItemFiltered && !isShowAll) {
+        item.classList.add("hide");
+      } else {
+        item.classList.remove("hide");
+      }
+    });
+  }
+
+  buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const currentCategory = button.dataset.filter;
+      console.log(currentCategory);
+      filter(currentCategory, cards);
+     //   alert(currentCategory)
+     
+    });
+  });
+}
+
+myapp();
+
+    
+    
+    
+</script>
     
 </body>
 </html>
+
