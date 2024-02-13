@@ -38,7 +38,7 @@ h1 {
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(350px,  1fr));
   grid-gap: 20px;
   align-items: stretch;
 }
@@ -156,19 +156,25 @@ box-shadow: inset 9.91px 9.91px 15px #D9DADE, inset -9.91px -9.91px 15px #FFFFFF
 
      
 
-@media screen and (max-width: 600px) {
-
+    
+    
+@media  (max-width: 500px) {
     body {
         
         background-color: red;
     }
     
-    .grid > article {
-        width: 90vw;
+    .grid {
+        display: grid;
+        width: 100%;
+        margin: 0 auto;
+        grid-template-columns: 1fr;
+        
     }
-
-}
     
+    
+}
+  
     
 /*****Filtros ****/
 /*****************/    
