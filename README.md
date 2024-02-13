@@ -22,6 +22,12 @@ Diseño (Cards + estilo neumorphism)
 
 
 
+
+
+
+
+
+
 Layout: 
 
 * Uso de grid CSS responsive para home (without @mediaquery)
