@@ -1,6 +1,6 @@
 
 
-###  mgea.github.io
+###  Portfolio - mgea.github.io
 
 Updated, Feb, 2024
 
@@ -8,11 +8,34 @@ Updated, Feb, 2024
 
 
 
+Incluye: 
+
+**DIU** 
+
+* /UX-DIU-Checklist
+* /UX-DIU-Toolkit
+
+
+
+**FCD-COM_Av**
+
+* Lineas de TFM de Master CMyPM  /storytelling-tfm
+* Presentación asignatura CDNCAV /cdncav
+* contenidos Master CMyPM  
+  * master.html 
+  * /content
+
+**PCDI** 
+
+* Pasapalabra - /pasapalabra23
 
 
 
 
 
+
+
+### Diseño (portfolio)  
 
 Diseño (Cards + estilo neumorphism)
 
@@ -21,16 +44,6 @@ Diseño (Cards + estilo neumorphism)
   cards alternative
 
 * neumorphic design https://neumorphic.design/
-
-
-
-
-
-
-
-
-
-
 
 Layout: 
 
@@ -43,18 +56,6 @@ Layout:
   
 
 * Alternativa: CSS grid + @mediaquery, https://webmadewell.com/css-grid-responsive-layouts/
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
