@@ -1,8 +1,10 @@
 <html>
 <!------ mgea.github.io (index cards)                             ---->
-<!------ CCBYNCSA mgea, Jan 2024 v1.0                             ---->
-<!------ index.html                                               ---->
-<!------  responsive grid + (autofiT VS Autofill ) no @mediaquery ---->  
+<!------ CCBYNCSA mgea, Feb 2024 v1.0                             ---->
+<!------ index2.html                                               ---->
+<!------  responsive grid + (autofiT VS Autofill )               ----->
+<!------      + @mediaquery                                       ---->
+<!------        https://webmadewell.com/css-grid-responsive-layouts/ ---->  
 <!------                                                          ----> 
 <!------ based on https://codepen.io/FrankieDoodie/pen/oPbMpQ     ----> 
 <!------ img cards de https://codepen.io/codingtuting/pen/XWrBgQz --->
@@ -37,7 +39,7 @@ h1 {
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   grid-gap: 20px;
   align-items: stretch;
 }
@@ -59,6 +61,7 @@ box-shadow: 9.91px 9.91px 15px #D9DADE, -9.91px -9.91px 15px #FFFFFF;
 border-radius: 15%;
 box-shadow: inset 9.91px 9.91px 15px #D9DADE, inset -9.91px -9.91px 15px #FFFFFF;
    cursor: pointer;
+
     
 }
 
@@ -120,12 +123,12 @@ box-shadow: 9.91px 9.91px 15px #D9DADE, -9.91px -9.91px 15px #FFFFFF;
     
     }
     
-h2 {
-  margin-top: 0;
+    h2 {
+        margin-top: 0;
     }
     
-p {
-   margin:0px;
+    p {
+        margin:0px;
     }
 
     
@@ -155,19 +158,47 @@ box-shadow: inset 9.91px 9.91px 15px #D9DADE, inset -9.91px -9.91px 15px #FFFFFF
 
      
 
-@media screen and (max-width: 600px) {
-
-    body {
+/********* mediaquerys ********/
+    
+@media only screen and (min-width: 640px) {
+  .grid {
+    grid-template-columns: 80%;
+    /* grid-column-gap: 5%;
+    grid-row-gap: 40px; */
+  }
+  .grid > article  {
+    padding: 20px;
+  }
+    
+body {
         
         background-color: red;
     }
+}    
     
-    .grid > article {
-        width: 90vw;
-    }
+    
+/*** 3 columnas  Tablet ***/ 
 
-}
     
+    
+/***    
+@media only screen and (min-width: 981px) {
+  .grid {
+    grid-template-columns: 30% 30% 30%;
+    grid-row-gap: 50px;
+  }
+  .grid > article {
+    padding: 30px;
+  }
+
+  body {
+        
+        background-color: blue;
+    }
+}    
+    **/
+
+
     
 /*****Filtros ****/
 /*****************/    
@@ -208,18 +239,16 @@ box-shadow: inset 9.91px 9.91px 15px #D9DADE, inset -9.91px -9.91px 15px #FFFFFF
     <div>
 
       <h1 style="align: right"> Filter: <button class="button button_all" data-filter="all">All</button>
-      <button class="button type_diu" data-filter="UX">UX</button>
-      <button class="button type_cmi" data-filter="CMI">Multim</button>
-      <button class="button type_comav" data-filter="COMAV">Tools</button></h1>
+      <button class="button type_diu" data-filter="DIU">DIU</button>
+      <button class="button type_cmi" data-filter="CMI">CMI</button>
+      <button class="button type_comav" data-filter="COMAV">COM_AV</button></h1>
       </div>
     </div>
-    
-    
   <div class="container">
   <main class="grid">
   
     <!---------------    UX Checklist    ---------------------------->
-    <article class="UX" onclick= OpenPage("https://mgea.github.io/UX-DIU-Checklist/index.html")>
+    <article class="DIU" onclick= OpenPage("https://mgea.github.io/UX-DIU-Checklist/index.html")>
           
      <div class="card-image" > <img src="https://blog.uxfol.io/wp-content/uploads/2022/07/UX-Project-Checklist.png" ></div>
       <div class="label"> DIU</div>
@@ -232,7 +261,7 @@ box-shadow: inset 9.91px 9.91px 15px #D9DADE, inset -9.91px -9.91px 15px #FFFFFF
     </article>
      
     <!---------------    User persona/Journey       ---------------------------->
-    <article class="UX" onclick= OpenPage("file:///Users/mgea/Software/Github/mgea.github.io/UX-DIU-Toolkit/index.html")>
+    <article class="DIU" onclick= OpenPage("file:///Users/mgea/Software/Github/mgea.github.io/UX-DIU-Toolkit/index.html")>
         <div class="card-image" > <img src="https://www.konrad.com/app/uploads/2021/04/UX-Research-Method-User-Persona-Main-Example.svg" ></div>
         <div class="label"> DIU</div>
       <div class="text">
@@ -246,7 +275,7 @@ box-shadow: inset 9.91px 9.91px 15px #D9DADE, inset -9.91px -9.91px 15px #FFFFFF
     </article>
    
       <!---------------    User persona/Journey       ---------------------------->
-    <article class="UX" onclick= OpenPage("file:./UX_Checklist_Cheatsheet.pdf")>
+    <article class="DIU" onclick= OpenPage("file:./UX_Checklist_Cheatsheet.pdf")>
         <div class="card-image" > <img src="./img/ux_checklist.png" ></div>
         <div class="label"> DIU</div>
       <div class="text">
@@ -356,7 +385,6 @@ box-shadow: inset 9.91px 9.91px 15px #D9DADE, inset -9.91px -9.91px 15px #FFFFFF
     
     
     
-<!----------------------- SCRIPTS --------------->
     
 <script> 
     
@@ -404,6 +432,8 @@ function myapp() {
 
 myapp();
 
+    
+    
     
 </script>
     
