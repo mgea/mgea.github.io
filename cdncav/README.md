@@ -5,19 +5,14 @@ Grado en Comunicación Audiovisual
 Presentacion de la asignatura 
 Profesores: 
 
-- Jordi Alberich 
+- Lidia Peralta 
 - Miguel Gea 
 
 
-Versión Web online: https://utopolis.ugr.es/media/cdncav/
-
-(novela visual monogatari funciona en Chrome)
+Versión Web online: https://mgea.github.io/cdncav/
 
 Presentacion realizada con reveal.js https://github.com/hakimel/reveal.js/ 
 
-* fotos-profes  (en P5.js) https://utopolis.ugr.es/media/cmi/bocetos/ basado en proyecto (CC) de Sen https://openprocessing.org/user/111166Ejemplo 
-* RainWords  (en P5.js) https://utopolis.ugr.es/media/cmi/rainWords/ basado en proyecto de (CC)  takawo   https://openprocessing.org/sketch/1033440 
+(novela visual monogatari funciona en Chrome)
 
-
-
-Granada, junio 2020
+Feb 2024
