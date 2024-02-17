@@ -1,12 +1,14 @@
 
 
-###  Portfolio - mgea.github.io
+###  mediaUX Portfolio - mgea.github.io
 
 Updated, Feb, 2024
 
+Website: http://mgea.github.io
 
 
 
+Sitio web dedicado a alojar contenidos y utilidades de diferentes temas relacionados con UX y medios interactivos. 
 
 Incluye: 
 
@@ -62,6 +64,10 @@ Layout:
 Uso de card filter: https://codepen.io/porsake/pen/GRqobQq
 
 
+
+### PDF viewer en móviles
+
+https://github.com/ankur2194/custom-html5-pdf-viewer-mobile-compatible
 
 
 
