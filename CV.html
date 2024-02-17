@@ -1,408 +1,91 @@
+<!DOCTYPE html>
+<!---- cv.html                          --->
+<!---- PDF VIEWER MOBILE                          --->
+<!------- bases on @ankur2194 https://github.com/ankur2194/custom-html5-pdf-viewer-mobile-compatible ---->
+
 <html>
-<!------ mgea.github.io (index cards)                 ---->
-<!------ CCBYNCSA mgea, Jan 2024 v1.0                          ---->
-<!------ based on https://codepen.io/FrankieDoodie/pen/oPbMpQ   ---> 
-<!------ img cards de https://codepen.io/codingtuting/pen/XWrBgQz --->
-<!----- cards effects https://codepen.io/szalaigabor1989/pen/QWoZNzL --->
-<!----- neumorphic design https://neumorphic.design/ -------------->
-<!----- card filter https://codepen.io/porsake/pen/GRqobQq  ----->
-<!------ Grid Card Responsive Layout ------------------------------->
-
-    
 <head>
-  <meta charset="UTF-8"> 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<style>
- 
- @import url('https://fonts.googleapis.com/css?family=Special+Elite');  
-
-body {
-  font-family: "Roboto", sans-serif;
-  background: #EEF0F4;
-  padding: 10px 0;
-  margin: 2vw;
-}
-
-h1 {
-        
-    font-family: 'Special Elite', cursive; 
-    color:darkslategray;
-    font-size: 24px;
-    }
-
-  
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-  grid-gap: 20px;
-  align-items: stretch;
-}
-
-.grid > article {
-/*  border: 1px solid #ccc; */
-  position:relative;   /** para establecer posiciones fijas en card (link inferior) */ 
-  height: 350px;       /** para asignar tamaño altura fijo a cards */
-  box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
-    
-  background: #EEF0F4;
-border-radius: 15%;
-box-shadow: 9.91px 9.91px 15px #D9DADE, -9.91px -9.91px 15px #FFFFFF;
-}
-    
-    
-.grid > article:hover {
- background: linear-gradient(145deg, #CDCFD2, #FFFFFF);
-border-radius: 15%;
-box-shadow: inset 9.91px 9.91px 15px #D9DADE, inset -9.91px -9.91px 15px #FFFFFF;
-   cursor: pointer;
-
-    
-}
-
-    
-    
-    
-.grid > article img {
-  max-width: 100%;
-    height: 200px;
-
-  border-radius: 35px;
-
-}
-
-.grid > article .text {
-  padding-left: 20px ;
-  padding-top: 0px;
-  ;
-}
-
-
-.grid > article > .label  {
-    /* tipo de preservación **/ 
-    font-family: 'Special Elite', cursive; 
-    position: absolute;
-    background: #cacaf5;
-    right:10%;
-    top:250px;
-}
-    
-.grid > article > .link {
-       font-family: 'Special Elite', cursive; 
-        position: absolute;
-        text-align: center;
-        color: black;
-     
-        left: 5%;
-         bottom: 3%;
-         width: 85%;
-        border-radius: 15px;
-        color: darkslategrey;
-      /* text-emphasis: 15px; */
-         padding: 0.5em;
-         background-color: #0acaf5; 
-      
-       font-size: 16px; 
-}
-
-
-footer {
-    margin-top: 25px;
-    padding: 15px; 
-    width: 98%;
-     font-family: 'Special Elite', cursive; 
-     font-size: 16px; 
-      background: #EEF0F4;
-border-radius: 10%;
-box-shadow: 9.91px 9.91px 15px #D9DADE, -9.91px -9.91px 15px #FFFFFF;
-    
-    }
-    
-    h2 {
-        margin-top: 0;
-    }
-    
-    p {
-        margin:0px;
-    }
-
-    
-    
- .card-image {
-   /*  background: #EEF0F4;
-border-radius: 15%;
-box-shadow: inset 9.91px 9.91px 15px #D9DADE, inset -9.91px -9.91px 15px #FFFFFF;
-**/    
-        position: relative;
-        margin: auto;
-        overflow: hidden;
-        width: 80%;
-        height: 200px;
-        padding: 20px;
-        border-radius: 15px ;
-        transition: all .2s ease-in-out; 
-        }
-
-.card-image:hover {
-        
-         -webkit-transform: scale(1.05);
-            -moz-transform: scale(1.05);
-            -o-transform: scale(1.05);
-            transform: scale(1.05);
-    }
-
-     
-
-@media (max-width: 600px) {
-
-    body {
-        
-        background-color: red;
-    }
-    
-    .grid > article {
-        width: 100%;
-    }
-   
-    
-    
-/*****Filtros ****/
-/*****************/    
-
-    
-    .button {
-         font-family: 'Special Elite', cursive; 
-         font-size: 16px; 
-        width: 80px;
-        height: 30px;
-        border-radius: 15px;
-        
-    }
-    
-    .button:hover {
-        background-color: darkturquoise;
-    }
-    
-.hide {
-  display: none;
-}
-
-    
-</style>
-  
-
-
+	<title>CV</title>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.2.2/pdf.min.js"></script>
 </head>
-
-    
 <body>
-    <!--------- CABECERA Y FILTROS ------------------------>
-    <div style="display:flex; justify-content: space-between;">
-        <!---- flex: https://codepen.io/Mandal/pen/eppRGV ---->
-       <div>
-         <h1><a href="https://mgea.github.io"> <img src="./img/mggithub.png" style="height: 30px" ></a> Miguel Gea portfolio</h1>
-       </div>
-    <div>
+	<div id="canvases"></div>
+	<script type="text/javascript" src="./script.js"></script>
+	<style type="text/css">
+		body {
+			background-color: #535759;
+		}
+		#canvases canvas {
+			margin: 20px auto;
+			display: block;
+		}
+	</style>
+    
+    
+    
+<script>
+    
+    
+var url = './CVmgea-en.pdf';
 
-      <h1 style="align: right"> Filter: <button class="button button_all" data-filter="all">All</button>
-      <button class="button type_diu" data-filter="DIU">DIU</button>
-      <button class="button type_cmi" data-filter="CMI">CMI</button>
-      <button class="button type_comav" data-filter="COMAV">COM_AV</button></h1>
-      </div>
-    </div>
-  <div class="container">
-  <main class="grid">
-  
-    <!---------------    UX Checklist    ---------------------------->
-    <article class="DIU" onclick= OpenPage("https://mgea.github.io/UX-DIU-Checklist/index.html")>
-          
-     <div class="card-image" > <img src="https://blog.uxfol.io/wp-content/uploads/2022/07/UX-Project-Checklist.png" ></div>
-      <div class="label"> DIU</div>
-      <div class="text">
-          
-        <h2>UX Checklist   </h2>
-        <p>Experiencia de Usuario, UX tools, methods </p> 
+var pdfjsLib = window['pdfjs-dist/build/pdf'];
+pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.2.2/pdf.worker.js';
 
-        </div>  
-    </article>
-     
-    <!---------------    User persona/Journey       ---------------------------->
-    <article class="DIU" onclick= OpenPage("file:///Users/mgea/Software/Github/mgea.github.io/UX-DIU-Toolkit/index.html")>
-        <div class="card-image" > <img src="https://www.konrad.com/app/uploads/2021/04/UX-Research-Method-User-Persona-Main-Example.svg" ></div>
-        <div class="label"> DIU</div>
-      <div class="text">
-          
-        <h2>Persona   </h2>
-        
-        <p>Experiencia de Usuario, Ideación, sketching & prototipado </p>  
-      </div>
-        
-        
-    </article>
-   
-      <!---------------    User persona/Journey       ---------------------------->
-    <article class="DIU" onclick= OpenPage("file:./UX_Checklist_Cheatsheet.pdf")>
-        <div class="card-image" > <img src="./img/ux_checklist.png" ></div>
-        <div class="label"> DIU</div>
-      <div class="text">
-          
-        <h2>UX Cheatsheet   </h2>
-        
-        <p>Experiencia de Usuario, Ideación, sketching & prototipado </p>  
-      </div>
-        
-        
-    </article>
-   
-      
-    
-       <!---------------    Sesión 3       ---------------------------->
-    <article onclick= OpenPage("https://editorial.centroculturadigital.mx/eliteratura")>
-        <div class="card-image"> <img src="https://elpilardigital.com/wp-content/uploads/2022/08/elpilardigital_storytelling-scaled.jpg" alt="Sample photo" ></div>
-       
-       <div class="text">
-          
-        <h2>Storytelling  </h2>
-        <p>Storytelling digital, long-form, inmersivo, aumentado</p>  
-      </div>
-        
-       
-    </article>
-      
-   
-    <!---------------    Sesión 4       ---------------------------->
-    <article>
-        <div class="card-image"> <img src="https://cdnp2.stackassets.com/5e1653998e6e0194958707b8d0cced203b80cfba/store/opt/596/447/29f844cbec715c585a1be01897fa8bcb2292e4c6b118125ed68ddcfdd4c2/product_185139_product_shots1.jpg" alt="Sample photo" ></div>
-      <div class="text">
-          
-        <h2>Diseño & Interacción  </h2>
-        <p> </p>  
-      </div>
-        
-        
-    </article>
-        
-   
-    <!---------------    Master Journalism      ---------------------------->
-    <article class="COMAV" onclick= OpenPage("./master.html")>
-        <div class="card-image"> <img src="https://cdn.vox-cdn.com/thumbor/oulgNYAI6_GNIpAhensHjmGAnH8=/0x0:6244x3500/1200x800/filters:focal(2623x1251:3621x2249)/cdn.vox-cdn.com/uploads/chorus_image/image/62641921/shutterstock_721678087.0.jpg" alt="Master index" ></div>
-        <div class="label"> ComAV</div>
-      <div class="text">
-          
-        <h2>Master journalism  </h2>
-        <p> Creación Multimedia y Periodismo Multiplataforma</p>  
-      </div>
-        
-        
-    </article>
-        
-           
-<!---------------   Sesión 6    ---------------------------->
-    <article>
-        <div class="card-image"> <img src="https://www.freecodecamp.org/espanol/news/content/images/2022/07/ferenc-almasi-NzERTNpnaDw-unsplash.jpg" alt="Wayback Machine" ></div>
-      <div class="text">
-          
-        <h2>Multimedia HTML5</h2>
-          <p> </p>
-        
-      </div>
-        
-        
-    </article>
-      
-           
-<!---------------   Sesión 7      ---------------------------->
-    <article>
-        <div class="card-image"> <img src="https://marvel-b1-cdn.bc0a.com/f00000000277771/www.bsu.edu/-/media/www/departmentalcontent/computerscience/images/game-design-1200.jpg"  ></div>
-      <div class="text">
-          
-        <h2>Games</h2>
-          <p>GDD, Game engine, plataformas </p>
-        
-      </div>
-        
-        
-    </article>
-      
-  <!---------------   mgea    ---------------------------->
-   
-    <article  onclick= OpenPage("file:./CVmgea-en.pdf")>
-        <div class="card-image" > <img src="https://avatars.githubusercontent.com/u/32359091" style="filter: grayscale(60%);" alt="Miguel Gea"></div>
-        
-      <div class="text">
-          
-        <h2>Acerca de   </h2>
-        
-        <p>CV resumido en inglés </p>  
-      </div>
-        
-        
-    </article>
-   
-      
-      
-      
-  </main>
-       
- <footer>
-      CC BYNCSA mgea, 2018-2024 
- </footer>
-</div>
-    
-    
-    
-    
-<script> 
-    
-    
-function  OpenPage(s) {
-  // abrir link en nuevo tab
-  //  alert(s);
-    window.open( s, "_blank");
-}
+var pdfDoc = null,
+    pageNum = 1,
+    pageRendering = false,
+    pageNumPending = null,
+    scale = 1.5;
 
+function renderPage(num, canvas) {
+  var ctx = canvas.getContext('2d');
+  pageRendering = true;
+  // Using promise to fetch the page
+  pdfDoc.getPage(num).then(function(page) {
+    var viewport = page.getViewport({scale: scale});
+    canvas.height = viewport.height;
+    canvas.width = viewport.width;
 
-/**** Filters: ****/
-    
-function myapp() {
-    
-  const buttons = document.querySelectorAll(".button");
-  const cards = document.querySelectorAll("article");
- // cards.forEach((element) => console.log(element));
-  function filter(category, items) {
-      items.forEach((element) => console.log(element));
-    items.forEach((item) => {
-         
-       console.log(items[0].toString);
-      const isItemFiltered = !item.classList.contains(category);
-      const isShowAll = category.toLowerCase() === "all";
+    // Render PDF page into canvas context
+    var renderContext = {
+      canvasContext: ctx,
+      viewport: viewport
+    };
+    var renderTask = page.render(renderContext);
 
-      if (isItemFiltered && !isShowAll) {
-        item.classList.add("hide");
-      } else {
-        item.classList.remove("hide");
+    // Wait for rendering to finish
+    renderTask.promise.then(function() {
+      pageRendering = false;
+      if (pageNumPending !== null) {
+        // New page rendering is pending
+        renderPage(pageNumPending);
+        pageNumPending = null;
       }
-    });
-  }
-
-  buttons.forEach((button) => {
-    button.addEventListener("click", () => {
-      const currentCategory = button.dataset.filter;
-      console.log(currentCategory);
-      filter(currentCategory, cards);
-     //   alert(currentCategory)
-     
     });
   });
 }
 
-myapp();
+pdfjsLib.getDocument(url).promise.then(function(pdfDoc_) {
+  pdfDoc = pdfDoc_;
 
+  const pages = parseInt(pdfDoc.numPages);
+
+  var canvasHtml = '';
+  for (var i = 0; i < pages; i++) {
+  	canvasHtml += '<canvas id="canvas_' + i + '"></canvas>';
+  }
+
+  document.getElementById('canvases').innerHTML = canvasHtml;
+
+  for (var i = 0; i < pages; i++) {
+  	var canvas = document.getElementById('canvas_' + i);
+  	renderPage(i+1, canvas);
+  }
+});
     
+
     
     
 </script>
-    
 </body>
 </html>
-
