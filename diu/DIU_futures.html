@@ -354,7 +354,7 @@
   
     <script>
         Reveal.initialize({
-                customcontrols: {
+              /*  customcontrols: {
                     width: "100%",
                      height: "100%",
 				
@@ -368,9 +368,9 @@
                          action: 'RevealChalkboard.toggleNotesCanvas();'
                         }
                     ]
-                },
+                }, */
                 // add menu plugin configuration
-            /*
+            
 				menu: {
 					themes: false,
 					transitions: false,
@@ -388,12 +388,12 @@
                         content: '<h5> Creación Multimedia Periodismo Multiplataforma, M. Gea 2024  </h5> <p>Documento realizado con revealJS <p>'
                       }
                     ]
-				}, */
+				}, 
                 chalkboard: {
                     // add configuration here
                 },
                 // ...
-            plugins: [ RevealChalkboard, RevealCustomControls,  RevealZoom ]
+            plugins: [ RevealChalkboard,  RevealMenu,  RevealZoom ]
             //    plugins: [ RevealChalkboard, RevealCustomControls, RevealMenu, RevealZoom ]
                 // ...
             });
