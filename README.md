@@ -1,4 +1,4 @@
-
+# Caso 1
 
 ###  mediaUX Portfolio - mgea.github.io
 
@@ -6,7 +6,7 @@ Updated, Feb, 2024
 
 Website: http://mgea.github.io
 
-
+# Caso 2
 
 Sitio web dedicado a alojar contenidos y utilidades de diferentes temas relacionados con UX y medios interactivos. 
 
