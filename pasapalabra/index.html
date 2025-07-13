@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<!--- basado en preguntas de https://es.educaplay.com/recursos-educativos/4282089-en_internet_con_responsabilidad.html -->
+<!---- Modificacion del juego de    https://github.com/MarioTerron/pasapalabra/ --->  
+<head>
+    <meta charset="UTF-8">
+  
+    <meta name="viewport" content="width=device-width, initial-scale=0.5"> 
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:100,200,400,600,900">
+    <title>Pasapalabra</title>
+</head>
+<body>
+	<section class="game">
+		<div> 
+			<div id="js--ng-controls" class="ng-controls">
+				
+				<h3 style="color:white"> Juego PASAPALABRA realizado para el <span style = "color:yellow"> CAMPUS DE VERANO “UNIDIVERSIDAD” 2025</span></h3>
+		</div>
+		<div class="circle-container">
+			<!--- 
+			<div class="title-container">
+				<p class="title"> PASAPALABRA</p>
+			</div>
+			-->
+		    <ul class="circle">
+		        <li class="item">A</li>
+		        <li class="item">B</li>
+		        <li class="item">C</li>
+		        <li class="item">D</li>
+		        <li class="item">E</li>
+		        <li class="item">F</li>
+		        <li class="item">G</li>
+		        <li class="item">H</li>
+		        <li class="item">I</li>
+		        <li class="item">J</li>
+		        <li class="item">L</li>
+		        <li class="item">M</li>
+		        <li class="item">N</li>
+				<li class="item">Ñ</li>
+		        <li class="item">O</li>
+		        <li class="item">P</li>
+		        <li class="item">Q</li>
+		        <li class="item">R</li>
+		        <li class="item">S</li>
+		        <li class="item">T</li>
+		        <li class="item">U</li>
+		        <li class="item">V</li>
+		        <li class="item">W</li>
+		        <li class="item">Y</li>
+		        <li class="item">Z</li>
+		    </ul>
+			
+			
+		</div>
+		
+		<div class="controls-container">
+			<i id="js--close" class="icon-close hidden"></i>
+			<div id="js--ng-controls" class="ng-controls">
+				
+				
+                <h3 style="color:white"> ¿Qué ROSCO quieres hacer? </h3>
+				<a href= "rosco1.html" class="btn"><i class="icon-play"></i>Rosco 1: Identidad Digital</a> <br>
+                <a href= "rosco4.html" class="btn"><i class="icon-play"></i>Rosco 2: Las Redes Sociales    </a>
+                <a href= "rosco3.html" class="btn"><i class="icon-play"></i>Rosco 3: Conoce Granada </a>
+			</div>
+			<div id="js--question-controls" class="question-controls hidden">
+				<span id="js--hint" class="hint"></span>
+				<p id="js--definition" class="definition"></p>
+
+				 <input id="js--user-answer" type="text" placeholder="">
+
+                    <a id="js--send" class="btn btn--green" href="#">Enviar</a>
+                
+				<p> <a id="js--pasapalabra" class="btn" style="left: 120px" href="#">Pasapalabra</a></p>
+			</div>
+			<div id="js--pa-controls" class="pa-controls hidden">
+				<p id="js--end-title" class="title"></p>
+				<p id="js--end-subtitle" class="subtitle"></p>
+				<a id="js--pa" class="btn" href=""><i class="icon-loop"></i>Jugar de nuevo</a>
+			</div>
+		</div>
+	</section>
+
+
+	<footer>
+		<p>Modulo de formación Digital. Basado en el juego de  <a href="https://github.com/MarioTerron/pasapalabra/">Mario Terron</a>, v. 1.2 CCBY mgea 2020-23</p>
+	</footer>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="js/rosco1.js"></script>
+</body>
+</html>
