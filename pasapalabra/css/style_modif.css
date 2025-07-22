@@ -455,7 +455,7 @@ body {
   padding-top: 2em;
   width: 500px; 
   top:0px;
-  zoom:1.5;
+  zoom:0.7;
   
 
 }
@@ -829,7 +829,7 @@ footer {
       width: 50%;
       height: 100%;
       padding-top: 0; 
-      zoom: 0.6;
+      zoom: 1;
     } 
   
    .question-controls {
