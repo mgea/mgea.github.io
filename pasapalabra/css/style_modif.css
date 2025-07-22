@@ -454,8 +454,8 @@ body {
 .circle-container {
   padding-top: 2em;
   width: 500px; 
-  border:double;
-  border-color: white;
+  zoom:0.9;
+  
 
 }
 
@@ -688,10 +688,10 @@ body {
 
   .title-container .title {
      /* display: none; */ 
-     /*  top: 100px; 
-      left:30px; */
+       top: 10px; 
+      left:30px; 
       color: #ff0;
-     transform: translate(20%, -80%);  
+     transform: translate(0%, 0%);  
       }
      
      
@@ -701,11 +701,10 @@ body {
 .controls-container {
   padding: 2em 0;
   position: absolute;
-  top: 20%;
+  top: 80%;
   left:2%;
-  width: 90%;
+  width: 95%;
   background-color: rgba(0, 0, 0, 0.5);
-  width: auto; 
   border-color:red;
   border-style: double;
 }
@@ -748,7 +747,7 @@ body {
   .ng-controls h4 {
     color: #fff;
     text-transform: uppercase; 
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     }
   .ng-controls p {
     color: #fff;
@@ -770,10 +769,10 @@ body {
   .question-controls .definition {
     margin-top: 2;
     color: #fff;
-    font-size: 1.5rem; }
+    font-size: 1.2rem; }
   .question-controls .hint {
     color: #ff0;
-    font-size: 1.8rem; }
+    font-size: 1.2rem; }
 
 .pa-controls {
   width: 80%;
@@ -832,10 +831,10 @@ footer {
    .question-controls {
       position: absolute;
       top: 200px;
-      left: 50%;
+      left: 20%;
       margin: 0;
       transform: translate(-50%, -50%);
-      width: 90%; }
+      width: 45%; }
 
   .controls-container {
       position: absolute;
@@ -853,6 +852,13 @@ footer {
       text-align: center; } 
 
 
+  .title-container  {
+     /* display: none; */ 
+       top: -50px; 
+      left:0px; 
+      color: rgb(0, 247, 255);
+     transform: translate(0%, 0%);  
+      }
 
   .ng-controls {
       position: absolute;
