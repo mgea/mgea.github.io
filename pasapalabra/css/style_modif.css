@@ -705,7 +705,7 @@ body {
   position: relative;
   
   left:2%;
-  width: 95%;
+  width: auto;
   background-color: rgba(0, 0, 0, 0.5);
   border-color:red;
   border-style: double;
